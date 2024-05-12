@@ -1,0 +1,217 @@
+{% include '_header2.html' %}
+<div class="breadcrumb-wrapper bg-cover" style='background-image: url("{{ url_for('.static', filename='/img/breadcrumb.png') }}");'>
+            <div class="line-shape">
+                <img src="{{ url_for('.static', filename='/img/breadcrumb-shape/line.png') }}" alt="shape-img">
+            </div>
+            <div class="plane-shape float-bob-y">
+                <img src="{{ url_for('.static', filename='/img/breadcrumb-shape/plane.png') }}" alt="shape-img">
+            </div>
+            <div class="doll-shape float-bob-x">
+                <img src="{{ url_for('.static', filename='/img/breadcrumb-shape/doll.png') }}" alt="shape-img">
+            </div>
+            <div class="parasuit-shape float-bob-y">
+                <img src="{{ url_for('.static', filename='/img/breadcrumb-shape/parasuit.png') }}" alt="shape-img">
+            </div>
+            <div class="frame-shape">
+                <img src="{{ url_for('.static', filename='/img/breadcrumb-shape/frame.png') }}" alt="shape-img">
+            </div>
+            <div class="bee-shape float-bob-x">
+                <img src="{{ url_for('.static', filename='/img/breadcrumb-shape/bee.png') }}" alt="shape-img">
+            </div>
+            <div class="container">
+                <div class="page-heading">
+                    <h1 class="wow fadeInUp el-messiri-class" data-wow-delay=".3s">تَعَلَّمْ مَعَنَا</h1>
+                    <ul class="breadcrumb-items wow fadeInUp" data-wow-delay=".5s">
+                        <li class="el-messiri-class">
+                                تَعَلَّمْ
+                        </li>
+                        <li>
+                            <i class="fas fa-chevron-left"></i>
+                        </li>
+                        <li>
+                            <a href="{{ url_for('hello_world') }}" class="el-messiri-class">
+                                الرَّئيسيَّةُ
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+</div>
+<section class="event-section fix section-padding">
+            <div class="container">
+                <div class="row g-4 justify-content-end">
+                    <div class="col-xl-4 col-lg-6 col-md-6wow fadeInUp" data-wow-delay=".3s">
+                        <div class="event-box-items mt-0 box-shadow">
+                            <div class="event-image">
+                                <div class="event-shape">
+                                    <img src="{{ url_for('.static', filename='/img/event/shape.png') }}" alt="shape-img">
+                                </div>
+                                <ul class="post-date">
+                                    <li class="el-messiri-class">
+                                        العَرَبِيَّةُ
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="event-content" style="text-align: right">
+                                <h3>
+                                    <a href="{{ url_for('arabic_dictee') }}" class="el-messiri-class">الإِمْلَاءُ الذَّاتِيُّ</a>
+                                </h3>
+                                <div style="text-align: center; margin-top: 1rem;">
+                                    <a href="{{ url_for('arabic_dictee') }}" class="theme-btn el-messiri-class"><i class="fa-solid fa-arrow-left-long"></i> وَاصِلْ </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 col-md-6wow fadeInUp" data-wow-delay=".3s">
+                        <div class="event-box-items mt-0 box-shadow">
+                            <div class="event-image">
+                                <div class="event-shape">
+                                    <img src="{{ url_for('.static', filename='/img/event/shape.png') }}" alt="shape-img">
+                                </div>
+                                <ul class="post-date">
+                                    <li class="el-messiri-class">
+                                        الانقْلِيزِيَّة
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="event-content" style="text-align: right">
+                                <h3>
+                                    <a href="{{ url_for('english_dictee') }}" class="el-messiri-class">الإِمْلَاءُ الذَّاتِيُّ</a>
+                                </h3>
+                                <div style="text-align: center; margin-top: 1rem;">
+                                    <a href="{{ url_for('english_dictee') }}" class="theme-btn el-messiri-class"><i class="fa-solid fa-arrow-left-long"></i> وَاصِلْ </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 col-md-6wow fadeInUp" data-wow-delay=".3s">
+                        <div class="event-box-items mt-0 box-shadow">
+                            <div class="event-image">
+                                <div class="event-shape">
+                                    <img src="{{ url_for('.static', filename='/img/event/shape.png') }}" alt="shape-img">
+                                </div>
+                                <ul class="post-date">
+                                    <li class="el-messiri-class">
+                                        الفِرَنْسِيّةُ
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="event-content" style="text-align: right">
+                                <h3>
+                                    <a href="{{ url_for('french_dictee') }}" class="el-messiri-class">الإِمْلَاءُ الذَّاتِيُّ</a>
+                                </h3>
+                                <div style="text-align: center; margin-top: 1rem;">
+                                    <a href="{{ url_for('french_dictee') }}" class="theme-btn el-messiri-class"><i class="fa-solid fa-arrow-left-long"></i> وَاصِلْ </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 col-md-6wow fadeInUp" data-wow-delay=".3s">
+                        <div class="event-box-items mt-0 box-shadow">
+                            <div class="event-image">
+                                <div class="event-shape">
+                                    <img src="{{ url_for('.static', filename='/img/event/shape.png') }}" alt="shape-img">
+                                </div>
+                                <ul class="post-date">
+                                    <li class="el-messiri-class">
+                                        العَرَبِيَّةُ
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="event-content" style="text-align: right">
+                                <h3>
+                                    <a href="{{ url_for('arabic_reading') }}" class="el-messiri-class">القِرَاءَةُ</a>
+                                </h3>
+                                <div style="text-align: center; margin-top: 1rem;">
+                                    <a href="{{ url_for('arabic_reading') }}" class="theme-btn el-messiri-class"><i class="fa-solid fa-arrow-left-long"></i> وَاصِلْ </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 col-md-6wow fadeInUp" data-wow-delay=".3s">
+                        <div class="event-box-items mt-0 box-shadow">
+                            <div class="event-image">
+                                <div class="event-shape">
+                                    <img src="{{ url_for('.static', filename='/img/event/shape.png') }}" alt="shape-img">
+                                </div>
+                                <ul class="post-date">
+                                    <li class="el-messiri-class">
+                                        الانقْلِيزِيَّة
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="event-content" style="text-align: right">
+                                <h3>
+                                    <a href="{{ url_for('english_reading') }}" class="el-messiri-class">القِرَاءَةُ</a>
+                                </h3>
+                                <div style="text-align: center; margin-top: 1rem;">
+                                    <a href="{{ url_for('english_reading') }}" class="theme-btn el-messiri-class"><i class="fa-solid fa-arrow-left-long"></i> وَاصِلْ </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 col-md-6wow fadeInUp" data-wow-delay=".3s">
+                        <div class="event-box-items mt-0 box-shadow">
+                            <div class="event-image">
+                                <div class="event-shape">
+                                    <img src="{{ url_for('.static', filename='/img/event/shape.png') }}" alt="shape-img">
+                                </div>
+                                <ul class="post-date">
+                                    <li class="el-messiri-class">
+                                        الفِرَنْسِيّةُ
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="event-content" style="text-align: right">
+                                <h3>
+                                    <a href="{{ url_for('french_reading') }}" class="el-messiri-class">القِرَاءَةُ</a>
+                                </h3>
+                                <div style="text-align: center; margin-top: 1rem;">
+                                    <a href="{{ url_for('french_reading') }}" class="theme-btn el-messiri-class"><i class="fa-solid fa-arrow-left-long"></i> وَاصِلْ </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 col-md-6wow fadeInUp" data-wow-delay=".3s">
+                        <div class="event-box-items mt-0 box-shadow">
+                            <div class="event-image">
+                                <div class="event-shape">
+                                    <img src="{{ url_for('.static', filename='/img/event/shape.png') }}" alt="shape-img">
+                                </div>
+                                <ul class="post-date">
+                                    <li class="el-messiri-class">
+                                        العَرَبِيَّةُ
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="event-content" style="text-align: right">
+                                <h3>
+                                    <a href="{{ url_for('arabic_letters') }}" class="el-messiri-class">كِتَابَةُ الْحُرُوف</a>
+                                </h3>
+                                <div style="text-align: center; margin-top: 1rem;">
+                                    <a href="{{ url_for('arabic_letters') }}" class="theme-btn el-messiri-class"><i class="fa-solid fa-arrow-left-long"></i> وَاصِلْ </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 col-md-6wow fadeInUp" data-wow-delay=".3s">
+                        <div class="event-box-items mt-0 box-shadow">
+                            <div class="event-image">
+                                <div class="event-shape">
+                                    <img src="{{ url_for('.static', filename='/img/event/shape.png') }}" alt="shape-img">
+                                </div>
+                            </div>
+                            <div class="event-content" style="text-align: right">
+                                <h3>
+                                    <a href="{{ url_for('digits') }}" class="el-messiri-class">كِتَابَةُ الأرْقَام</a>
+                                </h3>
+                                <div style="text-align: center; margin-top: 1rem;">
+                                    <a href="{{ url_for('digits') }}" class="theme-btn el-messiri-class"><i class="fa-solid fa-arrow-left-long"></i> وَاصِلْ </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+{% include '_footer2.html' %}

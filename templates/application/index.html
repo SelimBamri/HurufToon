@@ -1,0 +1,204 @@
+{% include '_header2.html' %}
+<section class="hero-section hero-1 fix">
+            <div class="bottom-shape">
+                <img src="{{ url_for('.static', filename='/img/hero/bottom.png') }}" alt="shape-img">
+            </div>
+            <div class="parasuit-shape float-bob-y">
+                <img src="{{ url_for('.static', filename='/img/hero/parasuit.png') }}" alt="shape-img">
+            </div>
+            <div class="left-shape">
+                <img src="{{ url_for('.static', filename='/img/hero/left.png') }}" alt="shape-img">
+            </div>
+            <div class="book-shape float-bob-x">
+                <img src="{{ url_for('.static', filename='/img/hero/book.png') }}" alt="shape-img">
+            </div>
+            <div class="pencil-shape">
+                <img src="{{ url_for('.static', filename='/img/hero/pencil.png') }}" alt="shape-img">
+            </div>
+            <div class="bee-shape float-bob-y">
+                <img src="{{ url_for('.static', filename='/img/hero/bee.png') }}" alt="shape-img">
+            </div>
+            <div class="right-shape">
+                <img src="{{ url_for('.static', filename='/img/hero/right.png') }}" alt="shape-img">
+            </div>
+            <div class="star-shape">
+                <img src="{{ url_for('.static', filename='/img/hero/star.png') }}" alt="shape-img">
+            </div>
+            <div class="container">
+                <div class="row g-4 align-items-center">
+                    <div class="col-lg-6" style="text-align: right;">
+                        <div class="hero-content">
+                            <h5 class="wow fadeInUp el-messiri-class">حــروف تــون</h5>
+                            <h1 class="wow fadeInUp el-messiri-class" data-wow-delay=".3s">
+                                بِنَاءُ مُسْتَقْبَلِكَ <br> <span>بِالعِلْم</span>
+                            </h1>
+                            <p class="wow fadeInUp el-messiri-class" data-wow-delay=".5s">حروف تون مِنَصَّةُ تَعْلِيمِيَّةُ مُتَخَصِّصَةُ تَهْدِفُ إِلَى دَعْمِ الْأَطْفَال  <br> الَّذِينَ يُعَانُونَ مِنْ صُعُوبَاتٍ فِي الْقِرَاءةِ </p>
+                            <div class="hero-button">
+                                <span class="button-text wow fadeInUp" data-wow-delay=".8s">
+                                    <span class="ms-4 d-line el-messiri-class" style="margin-right: 1rem">شَاهِدْ الْفِيدْيُو</span>
+                                    <a href="https://www.youtube.com/watch?v=Cn4G2lZ_g2I" class="video-btn ripple video-popup">
+                                        <i class="fa-solid fa-play"></i>
+                                    </a>
+                                </span>
+                                <a href="{{ url_for('signup') }}" class="theme-btn wow fadeInUp el-messiri-class" data-wow-delay=".7s">
+                                    <i class="fa-solid fa-arrow-left-long"></i>  اِنْضَمَّ الِينَا
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="hero-image wow fadeInUp" data-wow-delay=".4s">
+                            <img src="{{ url_for('.static', filename='/img/in1.jpg') }}" alt="hero-img">
+                            <div class="hero-shape">
+                                <img src="{{ url_for('.static', filename='/img/hero/hero-shape.png') }}" alt="shape-img">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+</section>
+<section class="about-section section-padding">
+            <div class="bus-shape float-bob-x">
+                <img src="{{ url_for('.static', filename='/img/about/bus.png') }}" alt="shape-img">
+            </div>
+            <div class="girl-shape float-bob-y">
+                <img src="{{ url_for('.static', filename='/img/about/girl.png') }}" alt="shape-img">
+            </div>
+            <div class="dot-shape">
+                <img src="{{ url_for('.static', filename='/img/about/dot.png') }}" alt="shape-img">
+            </div>
+            <div class="container">
+                <div class="about-wrapper mb-40">
+                    <div class="row g-4">
+                        <div class="col-lg-6">
+                            <div class="about-image wow fadeInUp" data-wow-delay=".3s">
+                                <img src="{{ url_for('.static', filename='/img/in2.jpg') }}" alt="about-img">
+                                <div class="about-image-2">
+                                    <img src="{{ url_for('.static', filename='/img/in3.jpg') }}" alt="about-img">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6" style="text-align: right">
+                            <div class="about-content">
+                                <div class="section-title">
+                                     <h2 class="wow fadeInUp el-messiri-class" data-wow-delay=".3s">خَدَمَاتُنَا</h2>
+                                </div>
+                                <p class="mt-3 mt-md-0 wow fadeInUp el-messiri-class" data-wow-delay=".5s">
+                                    تُهْدِي مُنْصِتُنَا خِدْمَاتٍ مُتَنَوِّعَةٍ لِتَوْفِيرَ تَجْرِبَة مُمَيَّزَة إِلَى مُسْتَعْمَلِيهَا
+                                </p>
+                                <div class="about-list">
+                                    <ul class="wow fadeInUp" data-wow-delay=".3s">
+                                        <li class="el-messiri-class">
+                                            أَلُعَابُ قِرَاءةٍ
+                                            <i class="fa-regular fa-circle-check"></i>
+                                        </li>
+                                        <li class="el-messiri-class">
+                                            أَلُعَابُ كِتَابَةٍ
+                                            <i class="fa-regular fa-circle-check"></i>
+                                        </li>
+                                    </ul>
+                                    <ul class="wow fadeInUp" data-wow-delay=".5s">
+                                        <li class="el-messiri-class">
+                                            أَلْعَاب حِسَابِيَّة
+                                            <i class="fa-regular fa-circle-check"></i>
+                                        </li>
+                                        <li class="el-messiri-class">
+رَسْمٌ
+                                            <i class="fa-regular fa-circle-check"></i>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="about-author">
+                                    <div class="about-button wow fadeInUp" data-wow-delay=".3s">
+                                        <a href="{{ url_for('about') }}" class="theme-btn el-messiri-class">
+                                            <i class="fa-solid fa-arrow-left-long"></i>      تَعَرَّف عَلَيْنَا
+                                        </a>
+                                    </div>
+                                    <div class="author-icon wow fadeInUp" data-wow-delay=".5s">
+                                        <div class="content">
+                                            <span class="el-messiri-class">تَوَاصَل مَعَنَا</span>
+                                            <h5>
+                                                <a href=#>21 974 414</a>
+                                            </h5>
+                                        </div>
+                                        <div class="icon">
+                                            <i class="fa-solid fa-phone"></i>
+                                       </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+</section>
+<section class="work-process-section fix section-padding fix">
+            <div class="container">
+                <div class="process-work-wrapper">
+                    <div class="row g-4">
+                        <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".3s">
+                            <div class="work-process-items text-center">
+                                <div class="line-shape">
+                                    <img src="{{ url_for('.static', filename='/img/process/line.png') }}" alt="shape-img">
+                                </div>
+                                <div class="icon bg-cover" style='background-image: url("{{ url_for('.static', filename='/img/process/icon-bg.png') }}");'>
+                                    <img src="{{ url_for('.static', filename='/img/process/01.svg') }}" alt="img">
+                                </div>
+                                <div class="content">
+                                    <h4 class="el-messiri-class">أَلْعَاب تَعْلِيمِيَّة</h4>
+                                    <p class="el-messiri-class">
+                                        أَلْعَاب تَعْلِيمِيَّة مُتَنَوِّعَةٌ مِنْ أَجَلْ تَطْوِيرَ مَهَارَاتِ اِبْنِكَ
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".5s">
+                            <div class="work-process-items text-center style-2">
+                                <div class="line-shape-2">
+                                    <img src="{{ url_for('.static', filename='/img/process/line-2.png') }}" alt="shape-img">
+                                </div>
+                                <div class="icon bg-cover" style='background-image: url("{{ url_for('.static', filename='/img/process/icon-bg.png') }}");'>
+                                    <img src="{{ url_for('.static', filename='/img/process/02.svg') }}" alt="img">
+                                </div>
+                                <div class="content">
+                                    <h4 class="el-messiri-class">مُخْتَصُّو عِلَاج</h4>
+                                    <p class="el-messiri-class">
+                                        تَوَاصَلْ مَعَ مُخْتَصِّي عِلَاج مِنْ أَجْل إحَاطَة أَفضَل بِابنِك
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".7s">
+                            <div class="work-process-items text-center">
+                                <div class="line-shape">
+                                    <img src="{{ url_for('.static', filename='/img/process/line.png') }}" alt="shape-img">
+                                </div>
+                                <div class="icon bg-cover" style='background-image: url("{{ url_for('.static', filename='/img/process/icon-bg.png') }}");'>
+                                    <img src="{{ url_for('.static', filename='/img/process/03.svg') }}" alt="img">
+                                </div>
+                                <div class="content">
+                                    <h4 class="el-messiri-class">مُتَابَعَة مُسْتَمِرَّة</h4>
+                                    <p class="el-messiri-class">
+                                        تَابِع أَنْشِطَة وَ تَطَوُّر اِبْنِكَ بِاِسْتِمْرَارٍ
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".8s">
+                            <div class="work-process-items text-center">
+                                <div class="content style-two">
+                                    <h4 class="el-messiri-class"> مُرَافِقِنَا الْاِفْتِرَاضِيّ</h4>
+                                    <p class="el-messiri-class">
+                                        اجَابَة لأسْئِلَتِكُمِ الْمُتَعَلِّقَةِ بِخَلَلِ الْقِرَاءةِ
+                                    </p>
+                                </div>
+                                <div class="icon bg-cover" style='background-image: url("{{ url_for('.static', filename='/img/process/icon-bg.png') }}");'>
+                                    <img src="{{ url_for('.static', filename='/img/process/04.svg') }}" alt="img">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+</section>
+{% include '_footer2.html' %}

@@ -1,0 +1,71 @@
+  <footer id="footer" class="bg-gray">
+    <div class="container text-center padding-medium">
+      <a class="navbar-brand" href="index.html">
+        <img src="{{ url_for('static',filename='images/main-logo.png')}}" class="logo img-fluid" style="width: 15%; height: auto;">
+      </a>
+      <ul class="info text-center list-unstyled mt-4">
+        <li class="location text-capitalize mb-2 d-flex justify-content-center align-items-center">
+          <svg class="text-primary me-1" width="18" height="18">
+            <use xlink:href="#location"></use>
+          </svg>تونس
+        </li>
+        <li class="email text-capitalize mb-2 d-flex justify-content-center align-items-center">
+          <svg class="text-primary me-1" width="18" height="18">
+            <use xlink:href="#email"></use>
+          </svg>huruf.toon@gmail.com
+        </li>
+        <li class="phone text-capitalize mb-2 d-flex justify-content-center align-items-center">
+          <svg class="text-primary me-1" width="18" height="18">
+            <use xlink:href="#phone"></use>
+          </svg>21 974 414
+        </li>
+      </ul>
+      <div class="social-links mt-5">
+        <ul class="d-flex justify-content-center list-unstyled gap-2 m-0">
+          <li class="social">
+            <a href="#">
+              <iconify-icon class="social-icon" icon="ri:facebook-fill"></iconify-icon>
+            </a>
+          </li>
+          <li class="social">
+            <a href="#">
+              <iconify-icon class="social-icon" icon="ri:twitter-fill"></iconify-icon>
+            </a>
+          </li>
+          <li class="social">
+            <a href="#">
+              <iconify-icon class="social-icon" icon="ri:pinterest-fill"></iconify-icon>
+            </a>
+          </li>
+          <li class="social">
+            <a href="#">
+              <iconify-icon class="social-icon" icon="ri:instagram-fill"></iconify-icon>
+            </a>
+          </li>
+          <li class="social">
+            <a href="#">
+              <iconify-icon class="social-icon" icon="ri:youtube-fill"></iconify-icon>
+            </a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+    <div class="bg-gray border-top">
+      <div class="text-center py-4">
+        <p class="mb-0">©2024 Huruf Toon.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="{{ url_for('static',filename='js/jquery-1.11.0.min.js') }}"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    crossorigin="anonymous"></script>
+  <script type="text/javascript" src="{{ url_for('static',filename='js/plugins.js')}}"></script>
+  <script type="text/javascript" src="{{ url_for('static',filename='js/script.js')}}"></script>
+  <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+</body>
+
+</html>

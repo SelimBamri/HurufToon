@@ -1,0 +1,306 @@
+{% include '_header2.html' %}
+<div class="breadcrumb-wrapper bg-cover" style='background-image: url("{{ url_for('.static', filename='/img/breadcrumb.png') }}");'>
+            <div class="line-shape">
+                <img src="{{ url_for('.static', filename='/img/breadcrumb-shape/line.png') }}" alt="shape-img">
+            </div>
+            <div class="plane-shape float-bob-y">
+                <img src="{{ url_for('.static', filename='/img/breadcrumb-shape/plane.png') }}" alt="shape-img">
+            </div>
+            <div class="doll-shape float-bob-x">
+                <img src="{{ url_for('.static', filename='/img/breadcrumb-shape/doll.png') }}" alt="shape-img">
+            </div>
+            <div class="parasuit-shape float-bob-y">
+                <img src="{{ url_for('.static', filename='/img/breadcrumb-shape/parasuit.png') }}" alt="shape-img">
+            </div>
+            <div class="frame-shape">
+                <img src="{{ url_for('.static', filename='/img/breadcrumb-shape/frame.png') }}" alt="shape-img">
+            </div>
+            <div class="bee-shape float-bob-x">
+                <img src="{{ url_for('.static', filename='/img/breadcrumb-shape/bee.png') }}" alt="shape-img">
+            </div>
+            <div class="container">
+                <div class="page-heading">
+                    <h1 class="wow fadeInUp" data-wow-delay=".3s">Test d'évaluation </h1>
+                </div>
+            </div>
+</div>
+<section class="program-section section-padding section-bg-2 fix">
+            <div class="top-shape">
+                <img src="{{ url_for('.static', filename='/img/section-top-shape.png') }}" alt="shape-img">
+            </div>
+            <div class="bottom-shape">
+                <img src="{{ url_for('.static', filename='/img/section-bottom-shape.png') }}" alt="shape-img">
+            </div>
+            <div class="mask-shape float-bob-x">
+                <img src="{{ url_for('.static', filename='/img/program/mask.png') }}" alt="shape-img">
+            </div>
+            <div class="pencil-shape">
+                <img src="{{ url_for('.static', filename='/img/program/pencil.png') }}" alt="shape-img">
+            </div>
+            <div class="mask-shape-2">
+                <img src="{{ url_for('.static', filename='/img/program/mask-2.png') }}" alt="shape-img">
+            </div>
+            <div class="compass-shape">
+                <img src="{{ url_for('.static', filename='/img/program/compass.png') }}" alt="shape-img">
+            </div>
+            <div class="container center">
+                <button  id="toggleButton" class="theme-btn">
+                         Commencer
+                </button>
+                <form action="{{ url_for('test_french') }}" method="post" enctype = "multipart/form-data">
+                    <div class="card" id="q1" style="display: none; text-align: center; width: 50%; margin-left: auto; margin-right: auto; padding:3rem 0">
+                        <div class="card-body">
+                        <h2 style="margin-bottom: 2rem;">Question 1</h2>
+                        <p class="form-label" style="margin-bottom: 1rem;">Doublez le nombre suivant <br> <b>8</b></p>
+                        <input type="number" name="q1" class="form-control" style="text-align: center">
+                        <a  id="toq2" class="theme-btn" style="margin-top: 2rem;">
+                            Question suivante
+                        </a>
+                        </div>
+                    </div>
+                    <div class="card" id="q2" style="display: none; text-align: center; width: 50%; margin-left: auto; margin-right: auto; padding:3rem 0">
+                        <div class="card-body">
+                        <h2 style="margin-bottom: 2rem;">Question 2</h2>
+                        <p class="form-label" style="margin-bottom: 1rem;">Combien y a-t-il de points bleus dans l'image suivante</p>
+                        <img src="{{ url_for('.static', filename='img/q2.png') }}" alt="dots" style="display: block; margin-left: auto; margin-right: auto; width: 70%; margin-bottom: 2rem; border: 1px solid #555;">
+                        <input type="number" name="q2" class="form-control" style="text-align: center">
+                        <a  id="toq3" class="theme-btn" style="margin-top: 2rem;">
+                            Question suivante
+                        </a>
+                        </div>
+                    </div>
+                    <div class="card" id="q3" style="display: none; text-align: center; width: 50%; margin-left: auto; margin-right: auto; padding:3rem 0">
+                        <div class="card-body">
+                        <h2 style="margin-bottom: 2rem;">Question 3</h2>
+                        <p class="form-label" style="margin-bottom: 1rem;">Écrivez en chiffres le nombre suivant <br>quatre-vingt-seize</p>
+                        <input type="number" name="q3" class="form-control" style="text-align: center">
+                        <a  id="toq4" class="theme-btn" style="margin-top: 2rem;">
+                            Question suivante
+                        </a>
+                        </div>
+                    </div>
+                    <div class="card" id="q4" style="display: none; text-align: center; width: 50%; margin-left: auto; margin-right: auto; padding:3rem 0">
+                        <div class="card-body">
+                        <h2 style="margin-bottom: 2rem;">Question 4</h2>
+                        <p class="form-label" style="display: block; margin-bottom: 1rem">Quel symbole désigne l'addition</p>
+
+                        <input type="radio" id="a" name="q4" value="a">
+                        <label for="a"><b style="font-size: 3rem">-</b></label>
+                        <span style="margin-right: 1rem"></span>
+                        <input type="radio" id="b" name="q4" value="b">
+                        <label for="b"><b style="font-size: 3rem">×</b></label>
+                        <span style="margin-right: 1rem"></span>
+                        <input type="radio" id="c" name="q4" value="c">
+                        <label for="c"><b style="font-size: 3rem">÷</b></label>
+                        <span style="margin-right: 1rem;"></span>
+                        <input type="radio" id="d" name="q4" value="d">
+                        <label for="d"><b style="font-size: 3rem">+</b></label><div></div>
+                        <a  id="toq5" class="theme-btn el-messiri-class" style="margin-top: 2rem;">
+                            Question suivante
+                        </a>
+                        </div>
+                    </div>
+                    <div class="card" id="q5" style="display: none; text-align: center; width: 50%; margin-left: auto; margin-right: auto; padding:3rem 0">
+                        <div class="card-body">
+                        <h2 style="margin-bottom: 2rem;">Question 5</h2>
+                        <p class="form-label" style="margin-bottom: 1rem;">Quel est le résultat de cette équation <b>14 + 12</b></p>
+                        <input type="number" name="q5" class="form-control" style="text-align: center">
+                        <a  id="toq6" class="theme-btn" style="margin-top: 2rem;">
+                            Question suivante
+                        </a>
+                        </div>
+                    </div>
+                    <div class="card" id="q6" style="display: none; text-align: center; width: 50%; margin-left: auto; margin-right: auto; padding:3rem 0">
+                        <div class="card-body">
+                        <h2 style="margin-bottom: 2rem;">Question 6</h2>
+                        <p class="form-label" style="margin-bottom: 1rem;">Quel est le résultat de cette équation <b>3 × 7</b></p>
+                        <input type="number" name="q6" class="form-control" style="text-align: center">
+                        <a  id="toq7" class="theme-btn" style="margin-top: 2rem;">
+                            Question suivante
+                        </a>
+                        </div>
+                    </div>
+                    <div class="card" id="q7" style="display: none; text-align: center; width: 50%; margin-left: auto; margin-right: auto; padding:3rem 0">
+                        <div class="card-body">
+                        <h2 style="margin-bottom: 2rem;">Question 7</h2>
+                        <p class="form-label" style="display: block; margin-bottom: 1rem;">Réécrivez ces nombres dans un ordre décroissant <br>17 16 64 19 96 86</p>
+                        <input type="number" name="q71" class="form-control" style="width: 60px; display: inline-block">
+                        <
+                        <input type="number" name="q72" class="form-control" style="width: 60px; display: inline-block">
+                        <
+                        <input type="number" name="q73" class="form-control" style="width: 60px; display: inline-block">
+                        <
+                        <input type="number" name="q74" class="form-control" style="width: 60px; display: inline-block">
+                        <
+                        <input type="number" name="q75" class="form-control" style="width: 60px; display: inline-block">
+                        <
+                        <input type="number" name="q76" class="form-control" style="width: 60px; display: inline-block">
+                        <a  id="toq8" class="theme-btn" style="margin-top: 2rem; display: inline-block">
+                            Question suivante
+                        </a>
+                        </div>
+                    </div>
+
+                    <div class="card" id="q8" style="display: none; text-align: center; width: 50%; margin-left: auto; margin-right: auto; padding:3rem 0">
+                        <div class="card-body">
+                        <h2 style="margin-bottom: 2rem;">Étape 2</h2>
+                        <label for="image" class="form-label" style="display: block;">Joindre une photo d'un text que vous avez écrit en français</label>
+                        <input type="file" name="q8" id="ri" style="display: none;">
+                        <label for="ri" id="custom-file-upload" class="theme-btn el-messiri-class">Joindre</label>
+                            <div></div>
+                        <a  id="toq9" class="theme-btn" style="margin-top: 2rem;">
+                            Question suivante
+                        </a>
+                        </div>
+                    </div>
+                    <div class="card" id="q9" style="display: none; text-align: center; width: 50%; margin-left: auto; margin-right: auto; padding:3rem 0">
+                        <div class="card-body">
+                        <h2 style="margin-bottom: 2rem;">Étape 3</h2>
+                        <label for="stt" class="form-label" style="display: block;">Appuyez sur enregistrer puis lisez la phrase suivante</label>
+                        <b style="margin-top: 1rem; display: block; font-size: 1.5rem;">Il faut travailler beaucoup pour réussir.</b>
+                        <button id="record" type="button" class="theme-btn el-messiri-class" style="margin-top: 2rem">Enregistrer</button>
+                        <textarea name="q9" id="stt" cols="30" rows="10" style="display: none"></textarea>
+                        </div>
+                    </div>
+                        <div class="mb-3" style="display: none; text-align: center; margin-top: 2rem;" id="sbut">
+                            <button type="submit" class="theme-btn el-messiri-class">Terminer</button>
+                        </div>
+                </form>
+            </div>
+</section>
+<script>
+    const toggleButton = document.getElementById('toggleButton');
+    const quest1 = document.getElementById('q1');
+    const quest2 = document.getElementById('q2');
+    const quest3 = document.getElementById('q3');
+    const quest4 = document.getElementById('q4');
+    const quest5 = document.getElementById('q5');
+    const quest6 = document.getElementById('q6');
+    const quest7 = document.getElementById('q7');
+    const quest8 = document.getElementById('q8');
+    const quest9 = document.getElementById('q9');
+
+    const toquest2 = document.getElementById('toq2');
+    const toquest3 = document.getElementById('toq3');
+    const toquest4 = document.getElementById('toq4');
+    const toquest5 = document.getElementById('toq5');
+    const toquest6 = document.getElementById('toq6');
+    const toquest7 = document.getElementById('toq7');
+    const toquest8 = document.getElementById('toq8');
+    const toquest9 = document.getElementById('toq9');
+
+
+    const upload = document.getElementById('custom-file-upload');
+    upload.addEventListener('click', () => {
+        console.log("hello");
+        quest8.click();
+    });
+
+    toggleButton.addEventListener('click', () => {
+        quest1.style.display = 'block';
+        toggleButton.style.display = 'none';
+    });
+
+    toquest2.addEventListener('click', () => {
+        let input = document.querySelector('input[name="q1"]');
+        if(input.value !== '') {
+            quest1.style.display = 'none';
+            quest2.style.display = 'block';
+        }
+    });
+
+    toquest3.addEventListener('click', () => {
+        let input = document.querySelector('input[name="q2"]');
+        if(input.value !== '') {
+            quest2.style.display = 'none';
+            quest3.style.display = 'block';
+        }
+    });
+
+    toquest4.addEventListener('click', () => {
+        let input = document.querySelector('input[name="q3"]');
+        if(input.value !== '') {
+            quest3.style.display = 'none';
+            quest4.style.display = 'block';
+        }
+    });
+
+    toquest5.addEventListener('click', () => {
+        let radios = document.querySelectorAll('input[name="q4"]');
+        let isChecked = false;
+
+        for(let i = 0; i < radios.length; i++) {
+            if(radios[i].checked) {
+                isChecked = true;
+                break;
+            }
+        }
+        if(isChecked) {
+            quest4.style.display = 'none';
+            quest5.style.display = 'block';
+        }
+    });
+
+    toquest6.addEventListener('click', () => {
+        let input = document.querySelector('input[name="q5"]');
+        if(input.value !== '') {
+            quest5.style.display = 'none';
+            quest6.style.display = 'block';
+        }
+    });
+
+    toquest7.addEventListener('click', () => {
+        let input = document.querySelector('input[name="q6"]');
+        if(input.value !== '') {
+            quest6.style.display = 'none';
+            quest7.style.display = 'block';
+        }
+    });
+
+    toquest8.addEventListener('click', () => {
+        let n1 = document.querySelector('input[name="q71"]');
+        let n2 = document.querySelector('input[name="q72"]');
+        let n3 = document.querySelector('input[name="q73"]');
+        let n4 = document.querySelector('input[name="q74"]');
+        let n5 = document.querySelector('input[name="q75"]');
+        let n6 = document.querySelector('input[name="q76"]');
+        if(n1.value !== '' && n2.value !== '' && n3.value !== '' && n4.value !== '' && n5.value !== '' && n6.value !== '') {
+            quest7.style.display = 'none';
+            quest8.style.display = 'block';
+        }
+    });
+
+    toquest9.addEventListener('click', () => {
+        let input = document.querySelector('input[name="q8"]');
+        let bu = document.getElementById('sbut');
+        if(input.value !== '') {
+            quest8.style.display = 'none';
+            quest9.style.display = 'block';
+            bu.style.display = 'block';
+        }
+    });
+
+    var record_button = document.getElementById('record');
+    var result = document.getElementById('stt');
+    var recognition = new webkitSpeechRecognition();
+    var is_recording = false;
+
+    recognition.lang = "fr-FR";
+    recognition.interimResults = true;
+
+    record_button.addEventListener('click', () =>{
+        if(! is_recording){
+            recognition.start();
+        }
+        else{
+            recognition.stop();
+        }
+    })
+
+    recognition.addEventListener('result', (event) => {
+        const resultT = event.results[event.results.length - 1][0].transcript;
+        result.textContent = resultT;
+    });
+</script>
+{% include '_footer2.html' %}
+

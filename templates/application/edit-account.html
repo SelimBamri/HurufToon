@@ -1,0 +1,306 @@
+{% include '_header2.html' %}
+<div class="breadcrumb-wrapper bg-cover" style='background-image: url("{{ url_for('.static', filename='/img/breadcrumb.png') }}");'>
+            <div class="line-shape">
+                <img src="{{ url_for('.static', filename='/img/breadcrumb-shape/line.png') }}" alt="shape-img">
+            </div>
+            <div class="plane-shape float-bob-y">
+                <img src="{{ url_for('.static', filename='/img/breadcrumb-shape/plane.png') }}" alt="shape-img">
+            </div>
+            <div class="doll-shape float-bob-x">
+                <img src="{{ url_for('.static', filename='/img/breadcrumb-shape/doll.png') }}" alt="shape-img">
+            </div>
+            <div class="parasuit-shape float-bob-y">
+                <img src="{{ url_for('.static', filename='/img/breadcrumb-shape/parasuit.png') }}" alt="shape-img">
+            </div>
+            <div class="frame-shape">
+                <img src="{{ url_for('.static', filename='/img/breadcrumb-shape/frame.png') }}" alt="shape-img">
+            </div>
+            <div class="bee-shape float-bob-x">
+                <img src="{{ url_for('.static', filename='/img/breadcrumb-shape/bee.png') }}" alt="shape-img">
+            </div>
+            <div class="container">
+                <div class="page-heading">
+                    <h1 class="wow fadeInUp el-messiri-class" data-wow-delay=".3s">تَحْديثُ الحِسابِ</h1>
+                    <ul class="breadcrumb-items wow fadeInUp" data-wow-delay=".5s">
+                        <li class="el-messiri-class">
+                                تَحْديثُ الحِسابِ
+                        </li>
+                        <li>
+                            <i class="fas fa-chevron-left"></i>
+                        </li>
+                        <li>
+                            <a href="{{ url_for('hello_world') }}" class="el-messiri-class">
+                                الرَّئيسيَّةُ
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+</div>
+<section class="contact-section fix section-padding">
+            <div class="container">
+                <div class="contact-wrapper-2">
+                        <div>
+                            <div class="contact-content"  style="text-align: center">
+                                {% if user.role == "THERAPIST" %}
+                                    <form action="{{ url_for('edit_account') }}" id="contact-form" method="POST" class="contact-form-items" style="width: 30%; margin-left: auto; margin-right: auto" >
+                                        <div class="col">
+                                            <div class="row wow fadeInUp" data-wow-delay=".3s" style="margin-bottom: 3rem">
+                                                <div class="form-clt" style="text-align: right">
+                                                    <span class="el-messiri-class">البريد الالكتروني</span>
+                                                    <input style="text-align: right" type="email" name="email" value="{{ user.email }}">
+                                                </div>
+                                            </div>
+                                            <div class="row wow fadeInUp" data-wow-delay=".5s" style="margin-bottom: 3rem">
+                                                <div class="form-clt"  style="text-align: right">
+                                                    <span class="el-messiri-class">اسم الحساب</span>
+                                                    <input style="text-align: right" type="text" name="username" value="{{ user.username }}">
+                                                </div>
+                                            </div>
+                                            <div class="row wow fadeInUp" data-wow-delay=".5s" style="margin-bottom: 3rem">
+                                                <div class="form-clt"  style="text-align: right">
+                                                    <span class="el-messiri-class">الاسم</span>
+                                                    <input style="text-align: right" type="text" name="fname" value="{{ user.first_name }}">
+                                                </div>
+                                            </div>
+                                            <div class="row wow fadeInUp" data-wow-delay=".5s" style="margin-bottom: 3rem">
+                                                <div class="form-clt"  style="text-align: right">
+                                                    <span class="el-messiri-class">اللقب</span>
+                                                    <input style="text-align: right" type="text" name="lname" value="{{ user.last_name }}">
+                                                </div>
+                                            </div>
+                                            <div class="row wow fadeInUp" data-wow-delay=".5s" style="margin-bottom: 3rem">
+                                                <div class="form-clt"  style="text-align: right">
+                                                    <span class="el-messiri-class">الجنس</span>
+                                                    <select name="gender" id="gender" style="text-align: right">
+                                                        <option value="" style="text-align: right;">اختر</option>
+                                                        <option value="MALE">ذكر</option>
+                                                        <option value="FEMALE">أنثى</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="row wow fadeInUp" data-wow-delay=".5s" style="margin-bottom: 3rem">
+                                                <div class="form-clt"  style="text-align: right">
+                                                    <span class="el-messiri-class">تاريخ الميلاد</span>
+                                                    <input style="text-align: right" type="date" name="birthday" value="{{ user.birthday }}">
+                                                </div>
+                                            </div>
+                                            <div class="row wow fadeInUp" data-wow-delay=".5s" style="margin-bottom: 3rem">
+                                                <div class="form-clt"  style="text-align: right">
+                                                    <span class="el-messiri-class">البريد الالكتروني المهني</span>
+                                                    <input style="text-align: right" type="mail" name="email_pro" value="{{ user.professional_email }}">
+                                                </div>
+                                            </div>
+                                            <div class="row wow fadeInUp" data-wow-delay=".5s" style="margin-bottom: 3rem">
+                                                <div class="form-clt"  style="text-align: right">
+                                                    <span class="el-messiri-class">رابط التواصل على الفايسبوك</span>
+                                                    <input style="text-align: right" type="text" name="facebook" value="{{ user.facebook_link }}">
+                                                </div>
+                                            </div>
+                                            <div class="row wow fadeInUp" data-wow-delay=".5s" style="margin-bottom: 3rem">
+                                                <div class="form-clt"  style="text-align: right">
+                                                    <span class="el-messiri-class">رابط التواصل على الانستغرام</span>
+                                                    <input style="text-align: right" type="text" name="instagram" value="{{ user.instagram_link }}">
+                                                </div>
+                                            </div>
+                                            <div class="row wow fadeInUp" data-wow-delay=".5s" style="margin-bottom: 3rem">
+                                                <div class="form-clt"  style="text-align: right">
+                                                    <span class="el-messiri-class">رابط التواصل على اللينكدين</span>
+                                                    <input style="text-align: right" type="text" name="linkedin" value="{{ user.linkedin_link }}">
+                                                </div>
+                                            </div>
+                                            <div class="row wow fadeInUp" data-wow-delay=".5s" style="margin-bottom: 3rem">
+                                                <div class="form-clt"  style="text-align: right">
+                                                    <span class="el-messiri-class">العنوان</span>
+                                                    <input style="text-align: right" type="text" name="adresse" value="{{ user.address }}">
+                                                </div>
+                                            </div>
+                                            <div class="row wow fadeInUp" data-wow-delay=".5s" style="margin-bottom: 3rem">
+                                                <div class="form-clt"  style="text-align: right">
+                                                    <span class="el-messiri-class">رأيك في الموقع</span>
+                                                    <textarea style="text-align: right" name="feedback">{{ user.feedback }}</textarea>
+                                                </div>
+                                            </div>
+                                            <div class="row wow fadeInUp" data-wow-delay=".5s" style="margin-bottom: 3rem">
+                                                <div class="form-clt"  style="text-align: right">
+                                                    <span class="el-messiri-class">كلمة السر</span>
+                                                    <input style="text-align: right" type="password" name="password" value="{{ user.password }}">
+                                                </div>
+                                            </div>
+                                            <div class="row wow fadeInUp" data-wow-delay=".5s" style="margin-bottom: 3rem">
+                                                <div class="form-clt"  style="text-align: right">
+                                                    <span class="el-messiri-class">تأكيد كلمة السر</span>
+                                                    <input style="text-align: right" type="password" name="confirm_password" value="{{ user.password }}">
+                                                </div>
+                                            </div>
+                                            <div class="row wow fadeInUp" data-wow-delay=".5s" style="margin-bottom: 3rem">
+                                                <h3 style="color: red;" class="el-messiri-class">{{ error }}</h3>
+                                            </div>
+                                            <div class="wow fadeInUp" data-wow-delay=".9s">
+                                                <button type="submit" class="btn el-messiri-class">
+                                                   <i class="fa-solid fa-arrow-left-long"></i>تَحْديثُ الحِساب
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                {% endif %}
+                                {% if user.role == "STUDENT" %}
+                                        <form action="{{ url_for('edit_account') }}" id="contact-form" method="POST" class="contact-form-items" style="width: 30%; margin-left: auto; margin-right: auto" >
+                                        <div class="col">
+                                            <div class="row wow fadeInUp" data-wow-delay=".3s" style="margin-bottom: 3rem">
+                                                <div class="form-clt" style="text-align: right">
+                                                    <span class="el-messiri-class">البريد الالكتروني</span>
+                                                    <input style="text-align: right" type="email" name="email" value="{{ user.email }}">
+                                                </div>
+                                            </div>
+                                            <div class="row wow fadeInUp" data-wow-delay=".5s" style="margin-bottom: 3rem">
+                                                <div class="form-clt"  style="text-align: right">
+                                                    <span class="el-messiri-class">اسم الحساب</span>
+                                                    <input style="text-align: right" type="text" name="username" value="{{ user.username }}">
+                                                </div>
+                                            </div>
+                                            <div class="row wow fadeInUp" data-wow-delay=".5s" style="margin-bottom: 3rem">
+                                                <div class="form-clt"  style="text-align: right">
+                                                    <span class="el-messiri-class">الاسم</span>
+                                                    <input style="text-align: right" type="text" name="fname" value="{{ user.first_name }}">
+                                                </div>
+                                            </div>
+                                            <div class="row wow fadeInUp" data-wow-delay=".5s" style="margin-bottom: 3rem">
+                                                <div class="form-clt"  style="text-align: right">
+                                                    <span class="el-messiri-class">اللقب</span>
+                                                    <input style="text-align: right" type="text" name="lname" value="{{ user.last_name }}">
+                                                </div>
+                                            </div>
+                                            <div class="row wow fadeInUp" data-wow-delay=".5s" style="margin-bottom: 3rem">
+                                                <div class="form-clt"  style="text-align: right">
+                                                    <span class="el-messiri-class">الجنس</span>
+                                                    <select name="gender" id="gender" style="text-align: right">
+                                                        <option value="" style="text-align: right;">اختر</option>
+                                                        <option value="MALE" {% if user.gender == 'MALE' %} selected {% endif %}>ذكر</option>
+                                                        <option value="FEMALE" {% if user.gender == 'FEMALE' %} selected {% endif %}>أنثى</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="row wow fadeInUp" data-wow-delay=".5s" style="margin-bottom: 3rem">
+                                                <div class="form-clt"  style="text-align: right">
+                                                    <span class="el-messiri-class">تاريخ الميلاد</span>
+                                                    <input style="text-align: right" type="date" name="birthday" value="{{ user.birthday }}">
+                                                </div>
+                                            </div>
+                                            <div class="row wow fadeInUp" data-wow-delay=".5s" style="margin-bottom: 3rem">
+                                                <div class="form-clt"  style="text-align: right">
+                                                    <span class="el-messiri-class">السنة الدراسية</span>
+                                                    <select name="school_year" id="school_year">
+                                                        <option value="" style="text-align: right;">اختر</option>
+                                                        <option value="1" {% if user.school_year == '1' %} selected {% endif %}>السنة الأولى</option>
+                                                        <option value="2" {% if user.school_year == '2' %} selected {% endif %}>السنة الثانية</option>
+                                                        <option value="3" {% if user.school_year == '3' %} selected {% endif %}>السنة الثالثة</option>
+                                                        <option value="4" {% if user.school_year == '4' %} selected {% endif %}>السنة الرابعة</option>
+                                                        <option value="5" {% if user.school_year == '5' %} selected {% endif %}>السنة الخامسة</option>
+                                                        <option value="6" {% if user.school_year == '6' %} selected {% endif %}>السنة السادسة</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="row wow fadeInUp" data-wow-delay=".5s" style="margin-bottom: 3rem">
+                                                <div class="form-clt"  style="text-align: right">
+                                                    <span class="el-messiri-class">كلمة السر</span>
+                                                    <input style="text-align: right" type="password" name="password" value="{{ user.password }}">
+                                                </div>
+                                            </div>
+                                            <div class="row wow fadeInUp" data-wow-delay=".5s" style="margin-bottom: 3rem">
+                                                <div class="form-clt"  style="text-align: right">
+                                                    <span class="el-messiri-class">تأكيد كلمة السر</span>
+                                                    <input style="text-align: right" type="password" name="confirm_password" value="{{ user.password }}">
+                                                </div>
+                                            </div>
+                                            <div class="row wow fadeInUp" data-wow-delay=".5s" style="margin-bottom: 3rem">
+                                                <h3 style="color: red;" class="el-messiri-class">{{ error }}</h3>
+                                            </div>
+                                            <div class="wow fadeInUp" data-wow-delay=".9s">
+                                                <button type="submit" class="btn el-messiri-class">
+                                                   <i class="fa-solid fa-arrow-left-long"></i> تَحْديثُ الحِساب
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                {% endif %}
+                                {% if user.role == "PARENT" %}
+                                    <form action="{{ url_for('edit_account') }}" id="contact-form" method="POST" class="contact-form-items" style="width: 30%; margin-left: auto; margin-right: auto" >
+                                    <div class="col">
+                                        <div class="row wow fadeInUp" data-wow-delay=".3s" style="margin-bottom: 3rem">
+                                            <div class="form-clt" style="text-align: right">
+                                                <span class="el-messiri-class">البريد الالكتروني</span>
+                                                <input style="text-align: right" type="email" name="email" value="{{ user.email }}">
+                                            </div>
+                                        </div>
+                                        <div class="row wow fadeInUp" data-wow-delay=".5s" style="margin-bottom: 3rem">
+                                            <div class="form-clt"  style="text-align: right">
+                                                <span class="el-messiri-class">اسم الحساب</span>
+                                                <input style="text-align: right" type="text" name="username" value="{{ user.username }}">
+                                            </div>
+                                        </div>
+                                        <div class="row wow fadeInUp" data-wow-delay=".5s" style="margin-bottom: 3rem">
+                                            <div class="form-clt"  style="text-align: right">
+                                                <span class="el-messiri-class">الاسم</span>
+                                                <input style="text-align: right" type="text" name="fname" value="{{ user.first_name }}">
+                                            </div>
+                                        </div>
+                                        <div class="row wow fadeInUp" data-wow-delay=".5s" style="margin-bottom: 3rem">
+                                            <div class="form-clt"  style="text-align: right">
+                                                <span class="el-messiri-class">اللقب</span>
+                                                <input style="text-align: right" type="text" name="lname" value="{{ user.last_name }}">
+                                            </div>
+                                        </div>
+                                        <div class="row wow fadeInUp" data-wow-delay=".5s" style="margin-bottom: 3rem">
+                                            <div class="form-clt"  style="text-align: right">
+                                                <span class="el-messiri-class">الجنس</span>
+                                                <select name="gender" id="gender" style="text-align: right">
+                                                    <option value="" style="text-align: right;">اختر</option>
+                                                    <option value="MALE" {% if user.gender == 'MALE' %} selected {% endif %}>ذكر</option>
+                                                    <option value="FEMALE" {% if user.gender == 'FEMALE' %} selected {% endif %}>أنثى</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="row wow fadeInUp" data-wow-delay=".5s" style="margin-bottom: 3rem">
+                                            <div class="form-clt"  style="text-align: right">
+                                                <span class="el-messiri-class">تاريخ الميلاد</span>
+                                                <input style="text-align: right" type="date" name="birthday" value="{{ user.birthday }}">
+                                            </div>
+                                        </div>
+                                        <div class="row wow fadeInUp" data-wow-delay=".5s" style="margin-bottom: 3rem">
+                                            <div class="form-clt"  style="text-align: right">
+                                                <span class="el-messiri-class">اسم حساب الطفل</span>
+                                                <input style="text-align: right" type="text" name="child" value="{{ child_username }}">
+                                            </div>
+                                        </div>
+                                        <div class="row wow fadeInUp" data-wow-delay=".5s" style="margin-bottom: 3rem">
+                                            <div class="form-clt"  style="text-align: right">
+                                                <span class="el-messiri-class">كلمة السر</span>
+                                                <input style="text-align: right" type="password" name="password" value="{{ user.password }}">
+                                            </div>
+                                        </div>
+                                        <div class="row wow fadeInUp" data-wow-delay=".5s" style="margin-bottom: 3rem">
+                                            <div class="form-clt"  style="text-align: right">
+                                                <span class="el-messiri-class">تأكيد كلمة السر</span>
+                                                <input style="text-align: right" type="password" name="confirm_password" value="{{ user.password }}">
+                                            </div>
+                                        </div>
+                                        <div class="row wow fadeInUp" data-wow-delay=".5s" style="margin-bottom: 3rem">
+                                            <h3 style="color: red;" class="el-messiri-class">{{ error }}</h3>
+                                        </div>
+                                        <div class="wow fadeInUp" data-wow-delay=".9s">
+                                            <button type="submit" class="btn el-messiri-class">
+                                               <i class="fa-solid fa-arrow-left-long"></i> تَحْديثُ الحِساب
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                                {% endif %}
+                                <a href="{{ url_for('delete_account') }}"><h6 style="margin-top: 10rem;" class="el-messiri-class"><i class="fa-solid fa-trash"></i> غَلْقُ الحِسابِ</h6></a>
+
+                            </div>
+                        </div>
+                </div>
+            </div>
+</section>
+{% include '_footer2.html' %}

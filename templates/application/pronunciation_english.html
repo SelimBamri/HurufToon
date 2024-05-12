@@ -1,0 +1,100 @@
+{% include '_header2.html' %}
+<div class="breadcrumb-wrapper bg-cover" style='background-image: url("{{ url_for('.static', filename='/img/breadcrumb.png') }}");'>
+            <div class="line-shape">
+                <img src="{{ url_for('.static', filename='/img/breadcrumb-shape/line.png') }}" alt="shape-img">
+            </div>
+            <div class="plane-shape float-bob-y">
+                <img src="{{ url_for('.static', filename='/img/breadcrumb-shape/plane.png') }}" alt="shape-img">
+            </div>
+            <div class="doll-shape float-bob-x">
+                <img src="{{ url_for('.static', filename='/img/breadcrumb-shape/doll.png') }}" alt="shape-img">
+            </div>
+            <div class="parasuit-shape float-bob-y">
+                <img src="{{ url_for('.static', filename='/img/breadcrumb-shape/parasuit.png') }}" alt="shape-img">
+            </div>
+            <div class="frame-shape">
+                <img src="{{ url_for('.static', filename='/img/breadcrumb-shape/frame.png') }}" alt="shape-img">
+            </div>
+            <div class="bee-shape float-bob-x">
+                <img src="{{ url_for('.static', filename='/img/breadcrumb-shape/bee.png') }}" alt="shape-img">
+            </div>
+            <div class="container">
+                <div class="page-heading">
+                    <h1 class="wow fadeInUp el-messiri-class" data-wow-delay=".3s">الْقِرَاءةُ</h1>
+                    <ul class="breadcrumb-items wow fadeInUp" data-wow-delay=".5s">
+                        <li class="el-messiri-class">
+                                الانقْلِيزِيَّة
+                        </li>
+                    </ul>
+                </div>
+            </div>
+</div>
+<section class="program-section section-padding section-bg-2 fix">
+            <div class="top-shape">
+                <img src="{{ url_for('.static', filename='/img/section-top-shape.png') }}" alt="shape-img">
+            </div>
+            <div class="bottom-shape">
+                <img src="{{ url_for('.static', filename='/img/section-bottom-shape.png') }}" alt="shape-img">
+            </div>
+            <div class="mask-shape float-bob-x">
+                <img src="{{ url_for('.static', filename='/img/program/mask.png') }}" alt="shape-img">
+            </div>
+            <div class="pencil-shape">
+                <img src="{{ url_for('.static', filename='/img/program/pencil.png') }}" alt="shape-img">
+            </div>
+            <div class="mask-shape-2">
+                <img src="{{ url_for('.static', filename='/img/program/mask-2.png') }}" alt="shape-img">
+            </div>
+            <div class="compass-shape">
+                <img src="{{ url_for('.static', filename='/img/program/compass.png') }}" alt="shape-img">
+            </div>
+            <div class="container center">
+                <button  id="toggleButton" class="theme-btn el-messiri-class">
+                         START
+                </button>
+                <form action="{% if user.school_year in ['1','2'] %}{{ url_for('english_reading') }}{% elif user.school_year in ['3','4'] %}{{ url_for('english_reading_medium') }} {% else %} {{ url_for('english_reading_hard') }}{% endif %}" style="text-align: right;" method="post" enctype = "multipart/form-data">
+                    <div class="card" id="q1" style="display: none; text-align: center; width: 50%; margin-left: auto; margin-right: auto; padding:3rem 0">
+                        <div class="card-body">
+                        <label for="stt" class="form-label el-messiri-class" style="display: block;">Click on the record button and read the following text</label>
+                            <b style="margin-top: 1rem; display: block; font-size: 1.5rem;" class="el-messiri-class">{{ word }}</b>
+                        <button id="record" type="button" class="theme-btn el-messiri-class" style="margin-top: 2rem">Record</button>
+                        <textarea name="a" id="stt" cols="30" rows="10" style="display: none"></textarea>
+                        </div>
+                    </div>
+                    <input type="text" name="ca" value="{{ word }}" style="display: none">
+                    <div class="mb-3" id="sbut" style="display: none; text-align: center; margin-top: 2rem;">
+                        <button type="submit" class="theme-btn el-messiri-class">Finish</button>
+                    </div>
+                </form>
+            </div>
+</section>
+<script>
+    const toggleButton = document.getElementById('toggleButton');
+    const quest1 = document.getElementById('q1');
+    const sub = document.getElementById('sbut');
+    var record_button = document.getElementById('record');
+    var result = document.getElementById('stt');
+    var recognition = new webkitSpeechRecognition();
+    var is_recording = false;
+
+    toggleButton.addEventListener('click', () => {
+        quest1.style.display = 'block';
+        sub.style.display = 'block';
+        toggleButton.style.display = 'none';
+    });
+
+    recognition.lang = "en-US";
+    recognition.interimResults = true;
+
+    record_button.addEventListener('click', () =>{
+            recognition.start();
+    })
+
+    recognition.addEventListener('result', (event) => {
+        const resultT = event.results[event.results.length - 1][0].transcript;
+        result.textContent = resultT;
+    });
+
+</script>
+{% include '_footer2.html' %}
+

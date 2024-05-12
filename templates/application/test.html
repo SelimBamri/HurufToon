@@ -1,0 +1,124 @@
+{% include '_header2.html' %}
+<div class="breadcrumb-wrapper bg-cover" style='background-image: url("{{ url_for('.static', filename='/img/breadcrumb.png') }}");'>
+            <div class="line-shape">
+                <img src="{{ url_for('.static', filename='/img/breadcrumb-shape/line.png') }}" alt="shape-img">
+            </div>
+            <div class="plane-shape float-bob-y">
+                <img src="{{ url_for('.static', filename='/img/breadcrumb-shape/plane.png') }}" alt="shape-img">
+            </div>
+            <div class="doll-shape float-bob-x">
+                <img src="{{ url_for('.static', filename='/img/breadcrumb-shape/doll.png') }}" alt="shape-img">
+            </div>
+            <div class="parasuit-shape float-bob-y">
+                <img src="{{ url_for('.static', filename='/img/breadcrumb-shape/parasuit.png') }}" alt="shape-img">
+            </div>
+            <div class="frame-shape">
+                <img src="{{ url_for('.static', filename='/img/breadcrumb-shape/frame.png') }}" alt="shape-img">
+            </div>
+            <div class="bee-shape float-bob-x">
+                <img src="{{ url_for('.static', filename='/img/breadcrumb-shape/bee.png') }}" alt="shape-img">
+            </div>
+            <div class="container">
+                <div class="page-heading">
+                    <h1 class="wow fadeInUp el-messiri-class" data-wow-delay=".3s">اخْتِبارٌ لِتَحْدِيدِ المُسْتَوَى</h1>
+                    <ul class="breadcrumb-items wow fadeInUp" data-wow-delay=".5s">
+                        <li class="el-messiri-class">
+                                الاخْتِبار
+                        </li>
+                        <li>
+                            <i class="fas fa-chevron-left"></i>
+                        </li>
+                        <li>
+                            <a href="{{ url_for('hello_world') }}" class="el-messiri-class">
+                                الرَّئيسيَّةُ
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+</div>
+<section class="program-section section-padding section-bg-2 fix">
+            <div class="top-shape">
+                <img src="{{ url_for('.static', filename='/img/section-top-shape.png') }}" alt="shape-img">
+            </div>
+            <div class="bottom-shape">
+                <img src="{{ url_for('.static', filename='/img/section-bottom-shape.png') }}" alt="shape-img">
+            </div>
+            <div class="mask-shape float-bob-x">
+                <img src="{{ url_for('.static', filename='/img/program/mask.png') }}" alt="shape-img">
+            </div>
+            <div class="pencil-shape">
+                <img src="{{ url_for('.static', filename='/img/program/pencil.png') }}" alt="shape-img">
+            </div>
+            <div class="mask-shape-2">
+                <img src="{{ url_for('.static', filename='/img/program/mask-2.png') }}" alt="shape-img">
+            </div>
+            <div class="compass-shape">
+                <img src="{{ url_for('.static', filename='/img/program/compass.png') }}" alt="shape-img">
+            </div>
+            <div class="container">
+                <div class="section-title text-center mt-60">
+                    <h2 class="wow fadeInUp el-messiri-class" data-wow-delay=".3s">لُغَةُ اجْتِيَاز الاخْتِيبَار </h2>
+                </div>
+                <div class="row">
+                    <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".3s">
+                        <div class="program-box-items">
+                            <div class="program-bg"></div>
+                            <div class="program-image">
+                                <img src="{{ url_for('.static', filename='/img/program/arab.png') }}" alt="img">
+                            </div>
+                            <div class="program-content text-center">
+                                <h4>
+                                    <a href="{{ url_for('test_arabic') }}" class="el-messiri-class">العَرَبيَّةٍُ</a>
+                                </h4>
+                                <p class="el-messiri-class">
+                                    اجْتَاز الاخْتِيبَار بِاللُغَةِ <br> العَرَبيَّةٍُ
+                                </p>
+                                <a href="{{ url_for('test_arabic') }}" class="arrow-icon">
+                                    <i class="fa-solid fa-arrow-right-long"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".5s">
+                        <div class="program-box-items">
+                            <div class="program-bg bg-2"></div>
+                            <div class="program-image">
+                                <img src="{{ url_for('.static', filename='/img/program/france.png') }}" alt="img">
+                            </div>
+                            <div class="program-content text-center">
+                                <h4>
+                                    <a href="{{ url_for('test_french') }}" class="el-messiri-class">الفَرَنْسيَّةُ</a>
+                                </h4>
+                                <p class="el-messiri-class">
+                                    اجْتَاز الاخْتِيبَار بِاللُغَةِ <br> الفَرَنْسيَّةُ
+                                </p>
+                                <a href="{{ url_for('test_french') }}" class="arrow-icon color-2">
+                                    <i class="fa-solid fa-arrow-right-long"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".7s">
+                        <div class="program-box-items">
+                            <div class="program-bg bg-3"></div>
+                            <div class="program-image">
+                                <img src="{{ url_for('.static', filename='/img/program/uk.png') }}" alt="img">
+                            </div>
+                            <div class="program-content text-center style-2">
+                                <h4>
+                                    <a href="{{ url_for('test_english') }}" class="el-messiri-class">الِانْقِلِيزِيَّةُ </a>
+                                </h4>
+                                <p class="el-messiri-class">
+                                    اجْتَاز الاخْتِيبَار بِاللُغَةِ <br> الِانْقِلِيزِيَّةُ
+                                </p>
+                                <a href="{{ url_for('test_english') }}" class="arrow-icon">
+                                    <i class="fa-solid fa-arrow-right-long"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+</section>
+{% include '_footer2.html' %}

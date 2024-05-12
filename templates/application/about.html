@@ -1,0 +1,200 @@
+{% set active_page = 'about' %}
+{% include '_header2.html' %}
+<div class="breadcrumb-wrapper bg-cover" style='background-image: url("{{ url_for('.static', filename='/img/breadcrumb.png') }}");'>
+            <div class="line-shape">
+                <img src="{{ url_for('.static', filename='/img/breadcrumb-shape/line.png') }}" alt="shape-img">
+            </div>
+            <div class="plane-shape float-bob-y">
+                <img src="{{ url_for('.static', filename='/img/breadcrumb-shape/plane.png') }}" alt="shape-img">
+            </div>
+            <div class="doll-shape float-bob-x">
+                <img src="{{ url_for('.static', filename='/img/breadcrumb-shape/doll.png') }}" alt="shape-img">
+            </div>
+            <div class="parasuit-shape float-bob-y">
+                <img src="{{ url_for('.static', filename='/img/breadcrumb-shape/parasuit.png') }}" alt="shape-img">
+            </div>
+            <div class="frame-shape">
+                <img src="{{ url_for('.static', filename='/img/breadcrumb-shape/frame.png') }}" alt="shape-img">
+            </div>
+            <div class="bee-shape float-bob-x">
+                <img src="{{ url_for('.static', filename='/img/breadcrumb-shape/bee.png') }}" alt="shape-img">
+            </div>
+            <div class="container">
+                <div class="page-heading">
+                    <h1 class="wow fadeInUp el-messiri-class" data-wow-delay=".3s">تَعَرَّفْ عَلَيْنَا</h1>
+                    <ul class="breadcrumb-items wow fadeInUp" data-wow-delay=".5s">
+                        <li class="el-messiri-class">
+                                التَّعْريفُ
+                        </li>
+                        <li>
+                            <i class="fas fa-chevron-left"></i>
+                        </li>
+                        <li>
+                            <a href="{{ url_for('hello_world') }}" class="el-messiri-class">
+                                الرَّئيسيَّةُ
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+</div>
+<section class="about-activities-section-2 style-2 section-padding">
+            <div class="zebra-shape float-bob-y">
+                <img src="{{ url_for('.static', filename="/img/about/zebra.png") }}" alt="shape-img">
+            </div>
+            <div class="bottom-shape">
+                <img src="{{ url_for('.static', filename="/img/section-top-shape-2.png") }}" alt="shape-img">
+            </div>
+            <div class="sun-shape">
+                <img src="{{ url_for('.static', filename="/img/client/shape-2.png") }}" alt="shape-img">
+            </div>
+            <div class="container">
+                <div class="about-activities-wrapper style-2">
+                    <div class="row g-4">
+                        <div class="col-lg-6 wow fadeInUp" data-wow-delay=".3s">
+                            <div class="activities-image-items">
+                                <img src="{{ url_for('.static', filename="/img/about/04.png") }}" alt="img">
+                                <div class="radius-shape">
+                                    <img src="{{ url_for('.static', filename="/img/about/radius-shape.png") }}" alt="shape-img">
+                                </div>
+                                <div class="circle-shape">
+                                    <img src="{{ url_for('.static', filename="/img/about/circle.png") }}" alt="shape-img">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="activities-content">
+                                <div class="section-title">
+                                    <h2 class="wow fadeInUp el-messiri-class" data-wow-delay=".3s" style="text-align: right">
+                                        مَنْ نَحْن
+                                    </h2>
+                                </div>
+                                <p class="mt-3 mt-md-0 wow fadeInUp el-messiri-class" data-wow-delay=".5s" style="text-align: right">
+نَحْنُ فَريقٌ مُتَفانيٌّ مِنْ طُلّابِ عُلومِ البَيَانَاتِ اَلَّذِينَ اجْتَمَعَ حَبُّهُمْ لِلْعَمَلِ الإِنْسانيِّ وَعُلومِ الكُمْبيوتَرِ فِي هَذِهِ المِنَصَّةِ الرّائِعَة                                </p>
+                                <div class="row g-4 mt-4">
+                                    <div class="col-xl-6 col-lg-8 col-md-6 wow fadeInUp" data-wow-delay=".3s">
+                                        <div class="icon-items">
+                                            <div class="icon">
+                                                <img src="{{ url_for('.static', filename="/img/about/icon-5.svg") }}" alt="img">
+                                            </div>
+                                            <div class="content">
+                                                <h5 class="el-messiri-class">تَمارينُ لِلتَّصْوِيرِ</h5>
+                                                <p class="el-messiri-class" style="text-align: center">تنمية للحس الفني
+                                                    <br> عند الأطفال <br> </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6 col-lg-8 col-md-6 wow fadeInUp" data-wow-delay=".5s">
+                                        <div class="icon-items">
+                                            <div class="icon">
+                                                <img src="{{ url_for('.static', filename="/img/about/icon-6.svg") }}" alt="img">
+                                            </div>
+                                            <div class="content">
+                                                <h5 class="el-messiri-class">تَعْليمٌ تَفاعُلي</h5>
+                                                <p class="el-messiri-class" style="text-align: center"> أنشطة تفاعلية
+                                                    <br> و مكثفة</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="about-author">
+                                    <div class="author-image wow fadeInUp" data-wow-delay=".3s">
+                                        <img src="{{ url_for('.static', filename="/img/about/author.png") }}" alt="author-img">
+                                        <div class="content">
+                                            <h6 class="el-messiri-class">ضياء بن عمار</h6>
+                                            <p>Co, Founder</p>
+                                        </div>
+                                    </div>
+                                    <div class="author-icon wow fadeInUp" data-wow-delay=".5s">
+                                        <div class="icon">
+                                             <i class="fa-solid fa-phone"></i>
+                                        </div>
+                                         <div class="content">
+                                             <span class="el-messiri-class">تَواصُلُ مَعَنَا</span>
+                                             <h5>
+                                                 <a href="#">21 974 414</a>
+                                             </h5>
+                                         </div>
+                                     </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+</section>
+<section class="feature-value-section fix section-padding section-bg-2">
+            <div class="shape-1">
+                <img src="{{ url_for('static',filename='/img/value/shape-1.png') }}" alt="shape-img">
+            </div>
+            <div class="shape-2 float-bob-x">
+                <img src="{{ url_for('static',filename='/img/value/shape-2.png') }}" alt="shape-img">
+            </div>
+            <div class="container">
+                <div class="section-title text-center">
+                    <h2 class="wow fadeInUp el-messiri-class" data-wow-delay=".3s">مُهِمَّتُنا</h2>
+                    <p style="text-align: center" class="el-messiri-class">عَبْرَ انْشَاءِ هَذِهِ المِنَصَّةِ يَسْعَى فَريقُنا الَّى الحَدِّ مِنْ الفَوارِقِ الِاجْتِماعيَّةِ وَ الصِّحّيَّةِ
+                        <br> عَبْرَ تَوْفيرِ مَكانِ أَمْنٍ مِنْ أَجْلِ الأَطْفالِ ذَوِي الصُّعُوبَاتِ التَّعْليميَّة</p>
+                </div>
+                <div class="row">
+                    <div class="col-xl-4 col-lg-6">
+                        <div class="feature-value-items">
+                            <div class="value-icon-items wow fadeInUp" data-wow-delay=".3s">
+                                <div class="icon">
+                                    <img src="{{ url_for('static',filename='/img/value/icon-1.svg') }}" alt="img">
+                                </div>
+                                <div class="content">
+                                    <h5 class="el-messiri-class">مُتَابَعَةُ تَطَوُّرِ اِبْنِكَ</h5>
+                                    <p class="el-messiri-class" style="text-align: right">يُمْكِنُكَ مُتَابَعَةُ التَّمَارينِ وَ الْأَلْعَابُ الَّتِي أَنْجَزَهَا طِفْلُكَ</p>
+                                </div>
+                            </div>
+                            <div class="value-icon-items wow fadeInUp" data-wow-delay=".5s">
+                                <div class="icon color-2">
+                                    <img src="{{ url_for('static',filename='/img/value/icon-2.svg') }}" alt="img">
+                                </div>
+                                <div class="content">
+                                    <h5 class="el-messiri-class">تُوَاصِلُ مَعَ مُخْتَصِّيُّ عِلَاَجٍ</h5>
+                                    <p class="el-messiri-class" style="text-align: right">يُمْكِنُكَ التَّوَاصُلُ مَعَ الْعَدِيدِ مِنْ مُخْتَصِّيِّ الْعِلَاَجِ مِنْ أَجَلْ تَسَاؤُلَاتِكَ</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 wow fadeInUp" data-wow-delay=".4s">
+                        <div class="feature-value-items">
+                            <div class="feature-value-image">
+                                <img src="{{ url_for('static',filename='/img/cta/cta-2.png') }}" alt="img">
+                                <div class="value-shape">
+                                    <img src="{{ url_for('static',filename='/img/cta/cta-shape-2.png') }}" alt="shape-img">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6">
+                        <div class="feature-value-items">
+                            <div class="value-icon-items style-2 wow fadeInUp" data-wow-delay=".3s">
+                                <div class="content">
+                                    <h5 class="el-messiri-class">أَلُعَابُ تَصْوِيرٍ وَ تَلْوينٌ</h5>
+                                    <p class="el-messiri-class">التَّسْلِيَةُ وَ اللُّعَبُ جُزْءَ مُهِمَّ مِنْ تَكْوينِ الْأَطْفَالِ لِذَلِكَ تَسْعَى مُنْصِتُنَا لِجَعَلَ تَجْرِبَةُ الطِّفْلِ جَمِيلَةً</p>
+                                </div>
+                                <div class="icon color-3">
+                                    <img src="{{ url_for('static',filename='/img/value/icon-3.svg') }}" alt="img">
+                                </div>
+                            </div>
+                            <div class="value-icon-items style-2 wow fadeInUp" data-wow-delay=".5s">
+                                <div class="content">
+                                    <h5 class="el-messiri-class">تُمَارِيَنَّ ممنهجَة</h5>
+                                    <p class="el-messiri-class">تُمَارِيَنَّ ممنهجَة وَ مُوَجَّهَةُ حَسْبُ نَسَقٍ وَ مُسْتَوَى الطِّفْلِ</p>
+                                </div>
+                                <div class="icon color-2 color-4">
+                                    <img src="{{ url_for('static',filename='/img/value/icon-4.svg') }}" alt="img">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+</section>
+
+
+
+{% include '_footer2.html' %}

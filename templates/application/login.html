@@ -1,0 +1,58 @@
+{% include '_header2.html' %}
+<div class="breadcrumb-wrapper bg-cover" style='background-image: url("{{ url_for('.static', filename='/img/breadcrumb.png') }}");'>
+            <div class="line-shape">
+                <img src="{{ url_for('.static', filename='/img/breadcrumb-shape/line.png') }}" alt="shape-img">
+            </div>
+            <div class="plane-shape float-bob-y">
+                <img src="{{ url_for('.static', filename='/img/breadcrumb-shape/plane.png') }}" alt="shape-img">
+            </div>
+            <div class="doll-shape float-bob-x">
+                <img src="{{ url_for('.static', filename='/img/breadcrumb-shape/doll.png') }}" alt="shape-img">
+            </div>
+            <div class="parasuit-shape float-bob-y">
+                <img src="{{ url_for('.static', filename='/img/breadcrumb-shape/parasuit.png') }}" alt="shape-img">
+            </div>
+            <div class="frame-shape">
+                <img src="{{ url_for('.static', filename='/img/breadcrumb-shape/frame.png') }}" alt="shape-img">
+            </div>
+            <div class="bee-shape float-bob-x">
+                <img src="{{ url_for('.static', filename='/img/breadcrumb-shape/bee.png') }}" alt="shape-img">
+            </div>
+            <div class="container">
+                <div class="page-heading">
+                    <h1 class="wow fadeInUp el-messiri-class" data-wow-delay=".3s">الدُّخولُ</h1>
+                    <ul class="breadcrumb-items wow fadeInUp" data-wow-delay=".5s">
+                        <li class="el-messiri-class">
+                                الدُّخولُ
+                        </li>
+                        <li>
+                            <i class="fas fa-chevron-left"></i>
+                        </li>
+                        <li>
+                            <a href="{{ url_for('hello_world') }}" class="el-messiri-class">
+                                الرَّئيسيَّةُ
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+</div>
+<section class="contact-section fix section-padding" style="text-align: center">
+            <form action="{{ url_for('login') }}" method="post" class="contact-form-items">
+              <div class="wow fadeInUp" data-wow-delay=".9s">
+                <input name="username" class="form-control" style="width: 200px; display: inline-block;" >
+                <label class="form-label el-messiri-class">اسم الحـسـاب</label>
+              </div>
+              <div class="wow fadeInUp" data-wow-delay=".9s">
+                <input type="password" name="password" class="form-control" style="width: 200px; display: inline-block;">
+                <label class="form-label el-messiri-class">الكلمة السرية</label>
+              </div>
+                <div class="wow fadeInUp" data-wow-delay=".9s" style="margin-top: 3rem">
+                    <button type="submit" class="theme-btn el-messiri-class">
+                        <i class="fa-solid fa-arrow-left-long"></i> الدُّخول
+                    </button>
+                </div>
+               <h4 style="color: red; margin-top: 3rem" data-wow-delay=".9s" class="el-messiri-class wow fadeInUp">{{ error }}</h4>
+            </form>
+</section>
+{% include '_footer2.html' %}

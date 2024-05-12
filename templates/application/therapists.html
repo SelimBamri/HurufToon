@@ -1,0 +1,58 @@
+{% set active_page = 'login' %}
+{% include '_header2.html' %}
+<div class="breadcrumb-wrapper bg-cover" style='background-image: url("{{ url_for('.static', filename='/img/breadcrumb.png') }}");'>
+            <div class="line-shape">
+                <img src="{{ url_for('.static', filename='/img/breadcrumb-shape/line.png') }}" alt="shape-img">
+            </div>
+            <div class="plane-shape float-bob-y">
+                <img src="{{ url_for('.static', filename='/img/breadcrumb-shape/plane.png') }}" alt="shape-img">
+            </div>
+            <div class="doll-shape float-bob-x">
+                <img src="{{ url_for('.static', filename='/img/breadcrumb-shape/doll.png') }}" alt="shape-img">
+            </div>
+            <div class="parasuit-shape float-bob-y">
+                <img src="{{ url_for('.static', filename='/img/breadcrumb-shape/parasuit.png') }}" alt="shape-img">
+            </div>
+            <div class="frame-shape">
+                <img src="{{ url_for('.static', filename='/img/breadcrumb-shape/frame.png') }}" alt="shape-img">
+            </div>
+            <div class="bee-shape float-bob-x">
+                <img src="{{ url_for('.static', filename='/img/breadcrumb-shape/bee.png') }}" alt="shape-img">
+            </div>
+            <div class="container">
+                <div class="page-heading">
+                    <h1 class="wow fadeInUp el-messiri-class" data-wow-delay=".3s">قائِمَةُ مُخْتَصّي العِلاج</h1>
+                    <ul class="breadcrumb-items wow fadeInUp" data-wow-delay=".5s">
+                        <li class="el-messiri-class">
+                                قائِمَةُ مُخْتَصّي العِلاج
+                        </li>
+                        <li>
+                            <i class="fas fa-chevron-left"></i>
+                        </li>
+                        <li>
+                            <a href="{{ url_for('hello_world') }}" class="el-messiri-class">
+                                الرَّئيسيَّةُ
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+</div>
+<section class="contact-section fix section-padding" style="text-align: center">
+<div style="width: 50%; margin-right: auto; margin-left: auto;">
+            {% for therapist in therapists %}
+    <div class="card" style="text-align: right; margin-bottom: 1rem;">
+      <div class="card-body">
+              <h5 class="card-title">{{ therapist.last_name }} {{ therapist.first_name }}</h5>
+              <h6 class="card-subtitle mb-2 text-muted">{{ therapist.address }} <i class="fa-solid fa-location-dot"></i></h6>
+              <p class="card-text">{{ therapist.feedback }}</p>
+              <h6 class="card-subtitle mb-2 text-muted"> {{ therapist.professional_email }} <i class="fa-regular fa-envelope"></i></h6>
+              <a href="{{ therapist.facebook }}" class="card-link"><i class="fa-brands fa-facebook"></i></a>
+              <a href="{{ therapist.instagram }}" class="card-link"><i class="fa-brands fa-instagram"></i></a>
+              <a href="{{ therapist.linkedin }}" class="card-link"><i class="fa-brands fa-linkedin"></i></a>
+      </div>
+    </div>
+    {% endfor %}
+</div>
+</section>
+{% include '_footer2.html' %}

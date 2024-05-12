@@ -1,0 +1,121 @@
+{% include '_header2.html' %}
+<div class="breadcrumb-wrapper bg-cover" style='background-image: url("{{ url_for('.static', filename='/img/breadcrumb.png') }}");'>
+            <div class="line-shape">
+                <img src="{{ url_for('.static', filename='/img/breadcrumb-shape/line.png') }}" alt="shape-img">
+            </div>
+            <div class="plane-shape float-bob-y">
+                <img src="{{ url_for('.static', filename='/img/breadcrumb-shape/plane.png') }}" alt="shape-img">
+            </div>
+            <div class="doll-shape float-bob-x">
+                <img src="{{ url_for('.static', filename='/img/breadcrumb-shape/doll.png') }}" alt="shape-img">
+            </div>
+            <div class="parasuit-shape float-bob-y">
+                <img src="{{ url_for('.static', filename='/img/breadcrumb-shape/parasuit.png') }}" alt="shape-img">
+            </div>
+            <div class="frame-shape">
+                <img src="{{ url_for('.static', filename='/img/breadcrumb-shape/frame.png') }}" alt="shape-img">
+            </div>
+            <div class="bee-shape float-bob-x">
+                <img src="{{ url_for('.static', filename='/img/breadcrumb-shape/bee.png') }}" alt="shape-img">
+            </div>
+            <div class="container">
+                <div class="page-heading">
+                    <h1 class="wow fadeInUp el-messiri-class" data-wow-delay=".3s">انْشَاءُ حِساب</h1>
+                    <ul class="breadcrumb-items wow fadeInUp" data-wow-delay=".5s">
+                        <li class="el-messiri-class">
+                                انْشَاءُ حِساب
+                        </li>
+                        <li>
+                            <i class="fas fa-chevron-left"></i>
+                        </li>
+                        <li>
+                            <a href="{{ url_for('hello_world') }}" class="el-messiri-class">
+                                الرَّئيسيَّةُ
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+</div>
+<section class="program-section section-padding section-bg-2 fix">
+            <div class="top-shape">
+                <img src="{{ url_for('.static', filename='/img/section-top-shape.png') }}" alt="shape-img">
+            </div>
+            <div class="bottom-shape">
+                <img src="{{ url_for('.static', filename='/img/section-bottom-shape.png') }}" alt="shape-img">
+            </div>
+            <div class="mask-shape float-bob-x">
+                <img src="{{ url_for('.static', filename='/img/program/mask.png') }}" alt="shape-img">
+            </div>
+            <div class="pencil-shape">
+                <img src="{{ url_for('.static', filename='/img/program/pencil.png') }}" alt="shape-img">
+            </div>
+            <div class="mask-shape-2">
+                <img src="{{ url_for('.static', filename='/img/program/mask-2.png') }}" alt="shape-img">
+            </div>
+            <div class="compass-shape">
+                <img src="{{ url_for('.static', filename='/img/program/compass.png') }}" alt="shape-img">
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".3s">
+                        <div class="program-box-items">
+                            <div class="program-bg"></div>
+                            <div class="program-image">
+                                <img src="{{ url_for('.static', filename='/img/program/01.png') }}" alt="img">
+                            </div>
+                            <div class="program-content text-center">
+                                <h4>
+                                    <a href="{{ url_for('signup_student') }}" class="el-messiri-class">انْشَاءُ حِسابِ تِلْميذٍ</a>
+                                </h4>
+                                <p class="el-messiri-class">
+                                    مِنْ أَجَلِ التَّعَلُّمَ <br>وَ تَطْوِيرِ الْمَهَارَات
+                                </p>
+                                <a href="{{ url_for('signup_student') }}" class="arrow-icon">
+                                    <i class="fa-solid fa-arrow-right-long"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".5s">
+                        <div class="program-box-items">
+                            <div class="program-bg bg-2"></div>
+                            <div class="program-image">
+                                <img src="{{ url_for('.static', filename='/img/program/02.png') }}" alt="img">
+                            </div>
+                            <div class="program-content text-center">
+                                <h4>
+                                    <a href="{{ url_for('signup_parent') }}" class="el-messiri-class">انْشَاءُ حِسابٍ وَلي</a>
+                                </h4>
+                                <p class="el-messiri-class">
+                                    لِمُتَابَعَةِ أَنْشِطَةَِ <br>اِبْنِكَ
+                                </p>
+                                <a href="{{ url_for('signup_parent') }}" class="arrow-icon color-2">
+                                    <i class="fa-solid fa-arrow-right-long"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".7s">
+                        <div class="program-box-items">
+                            <div class="program-bg bg-3"></div>
+                            <div class="program-image">
+                                <img src="{{ url_for('.static', filename='/img/program/03.png') }}" alt="img">
+                            </div>
+                            <div class="program-content text-center style-2">
+                                <h4>
+                                    <a href="{{ url_for('signup_therapist') }}" class="el-messiri-class">انْشَاءُ حِسابٍ مُعالِجٍ نُطَقَ </a>
+                                </h4>
+                                <p class="el-messiri-class">
+                                    لِتَقْديمِ الْمُرَافِقَةِ  <br>وَ النَّصَائِح
+                                </p>
+                                <a href="{{ url_for('signup_therapist') }}" class="arrow-icon">
+                                    <i class="fa-solid fa-arrow-right-long"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+</section>
+{% include '_footer2.html' %}

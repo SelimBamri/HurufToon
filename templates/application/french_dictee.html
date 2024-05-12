@@ -1,0 +1,170 @@
+{% include '_header2.html' %}
+<div class="breadcrumb-wrapper bg-cover" style='background-image: url("{{ url_for('.static', filename='/img/breadcrumb.png') }}");'>
+            <div class="line-shape">
+                <img src="{{ url_for('.static', filename='/img/breadcrumb-shape/line.png') }}" alt="shape-img">
+            </div>
+            <div class="plane-shape float-bob-y">
+                <img src="{{ url_for('.static', filename='/img/breadcrumb-shape/plane.png') }}" alt="shape-img">
+            </div>
+            <div class="doll-shape float-bob-x">
+                <img src="{{ url_for('.static', filename='/img/breadcrumb-shape/doll.png') }}" alt="shape-img">
+            </div>
+            <div class="parasuit-shape float-bob-y">
+                <img src="{{ url_for('.static', filename='/img/breadcrumb-shape/parasuit.png') }}" alt="shape-img">
+            </div>
+            <div class="frame-shape">
+                <img src="{{ url_for('.static', filename='/img/breadcrumb-shape/frame.png') }}" alt="shape-img">
+            </div>
+            <div class="bee-shape float-bob-x">
+                <img src="{{ url_for('.static', filename='/img/breadcrumb-shape/bee.png') }}" alt="shape-img">
+            </div>
+            <div class="container">
+                <div class="page-heading">
+                    <h1 class="wow fadeInUp el-messiri-class" data-wow-delay=".3s">الإِمْلَاءُ الذَّاتِي</h1>
+                    <ul class="breadcrumb-items wow fadeInUp" data-wow-delay=".5s">
+                        <li class="el-messiri-class">
+                                الفِرَنْسِيّةُ
+                        </li>
+                    </ul>
+                </div>
+            </div>
+</div>
+<section class="program-section section-padding section-bg-2 fix">
+            <div class="top-shape">
+                <img src="{{ url_for('.static', filename='/img/section-top-shape.png') }}" alt="shape-img">
+            </div>
+            <div class="bottom-shape">
+                <img src="{{ url_for('.static', filename='/img/section-bottom-shape.png') }}" alt="shape-img">
+            </div>
+            <div class="mask-shape float-bob-x">
+                <img src="{{ url_for('.static', filename='/img/program/mask.png') }}" alt="shape-img">
+            </div>
+            <div class="pencil-shape">
+                <img src="{{ url_for('.static', filename='/img/program/pencil.png') }}" alt="shape-img">
+            </div>
+            <div class="mask-shape-2">
+                <img src="{{ url_for('.static', filename='/img/program/mask-2.png') }}" alt="shape-img">
+            </div>
+            <div class="compass-shape">
+                <img src="{{ url_for('.static', filename='/img/program/compass.png') }}" alt="shape-img">
+            </div>
+            <div class="container center">
+                <button  id="toggleButton" class="theme-btn el-messiri-class">
+                         Commencer
+                </button>
+                <form action="{% if user.school_year in ['1','2'] %}{{ url_for('french_dictee') }}{% elif user.school_year in ['3','4'] %}{{ url_for('french_dictee_medium') }} {% else %} {{ url_for('french_dictee_hard') }}{% endif %}" style="text-align: right;" method="post" enctype = "multipart/form-data">
+                    <div class="card" id="q1" style="display: none; text-align: center; width: 50%; margin-left: auto; margin-right: auto; padding:3rem 0">
+                        <div class="card-body">
+                        <h3 class="form-label" style="margin-bottom: 1rem;">Appuyer sur le bouton pour écouter le texte</h3>
+                         <a  id="listen1" class="theme-btn" style="margin-bottom: 2rem;">
+                            Écouter
+                        </a>
+                            <textarea type="text" name="q1" class="form-control"></textarea>
+                        <a  id="toq2" class="theme-btn" style="margin-top: 2rem;">
+                            Texte suivant
+                        </a>
+                        </div>
+                    </div>
+                    <div class="card" id="q2" style="display: none; text-align: center; width: 50%; margin-left: auto; margin-right: auto; padding:3rem 0">
+                        <div class="card-body">
+                        <h3 class="form-label" style="margin-bottom: 1rem;">Appuyer sur le bouton pour écouter le texte</h3>
+                         <a  id="listen2" class="theme-btn" style="margin-bottom: 2rem;">
+                            Écouter
+                        </a>
+                            <textarea type="text" name="q2" class="form-control"></textarea>
+                        <a  id="toq3" class="theme-btn" style="margin-top: 2rem;">
+                            Texte suivant
+                        </a>
+                        </div>
+                    </div>
+                    <div class="card" id="q3" style="display: none; text-align: center; width: 50%; margin-left: auto; margin-right: auto; padding:3rem 0">
+                        <div class="card-body">
+                        <h3 class="form-label" style="margin-bottom: 1rem; ">Appuyer sur le bouton pour écouter le texte</h3>
+                         <a  id="listen3" class="theme-btn el-messiri-class" style="margin-bottom: 2rem;">
+                            Écouter
+                        </a>
+                            <textarea type="text" name="q3" class="form-control"></textarea>
+                        </div>
+                    </div>
+                    <input type="text" name="a1" value="{{ words[0] }}" style="display: none">
+                    <input type="text" name="a2" value="{{ words[1] }}" style="display: none">
+                    <input type="text" name="a3" value="{{ words[2] }}" style="display: none">
+                    <div class="mb-3" style="display: none; text-align: center; margin-top: 2rem;" id="sbut">
+                        <button type="submit" class="theme-btn el-messiri-class">Terminer</button>
+                    </div>
+                </form>
+            </div>
+</section>
+<script>
+    const toggleButton = document.getElementById('toggleButton');
+    const quest1 = document.getElementById('q1');
+    const quest2 = document.getElementById('q2');
+    const quest3 = document.getElementById('q3');
+
+    const toquest2 = document.getElementById('toq2');
+    const toquest3 = document.getElementById('toq3');
+
+    const lis1 = document.getElementById('listen1');
+    const lis2 = document.getElementById('listen2');
+    const lis3 = document.getElementById('listen3');
+
+    var heard1 = 0;
+    var heard2 = 0;
+    var heard3 = 0;
+
+    toggleButton.addEventListener('click', () => {
+        quest1.style.display = 'block';
+        toggleButton.style.display = 'none';
+    });
+
+    toquest2.addEventListener('click', () => {
+        let input = document.querySelector('textarea[name="q1"]').value;
+        if(input.value !== '') {
+            quest1.style.display = 'none';
+            quest2.style.display = 'block';
+        }
+    });
+
+    toquest3.addEventListener('click', () => {
+        let input = document.querySelector('textarea[name="q2"]').value;
+        if(input.value !== '') {
+            quest2.style.display = 'none';
+            quest3.style.display = 'block';
+            const submit_button = document.getElementById('sbut');
+            submit_button.style.display = 'block';
+        }
+    });
+
+    const synth = window.speechSynthesis;
+    let utterance = new SpeechSynthesisUtterance();
+    utterance.lang = 'fr-FR';
+
+    lis1.addEventListener('click', () =>{
+        if(heard1 < 3){
+            utterance.text = "{{ words[0] }}";
+            synth.speak(utterance);
+            heard1++;
+            console.log("{{ words[0] }}");
+        }
+    })
+
+    lis2.addEventListener('click', () =>{
+        if(heard2 < 3){
+            utterance.text = "{{ words[1] }}";
+            synth.speak(utterance);
+            heard2++;
+            console.log("{{ words[1] }}");
+        }
+    })
+
+    lis3.addEventListener('click', () =>{
+        if(heard3 < 3){
+            utterance.text = "{{ words[2] }}";
+            synth.speak(utterance);
+            heard3++;
+            console.log("{{ words[2] }}");
+        }
+    })
+</script>
+{% include '_footer2.html' %}
+

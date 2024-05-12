@@ -1,0 +1,136 @@
+{% include '_header2.html' %}
+<div class="breadcrumb-wrapper bg-cover" style='background-image: url("{{ url_for('.static', filename='/img/breadcrumb.png') }}");'>
+            <div class="line-shape">
+                <img src="{{ url_for('.static', filename='/img/breadcrumb-shape/line.png') }}" alt="shape-img">
+            </div>
+            <div class="plane-shape float-bob-y">
+                <img src="{{ url_for('.static', filename='/img/breadcrumb-shape/plane.png') }}" alt="shape-img">
+            </div>
+            <div class="doll-shape float-bob-x">
+                <img src="{{ url_for('.static', filename='/img/breadcrumb-shape/doll.png') }}" alt="shape-img">
+            </div>
+            <div class="parasuit-shape float-bob-y">
+                <img src="{{ url_for('.static', filename='/img/breadcrumb-shape/parasuit.png') }}" alt="shape-img">
+            </div>
+            <div class="frame-shape">
+                <img src="{{ url_for('.static', filename='/img/breadcrumb-shape/frame.png') }}" alt="shape-img">
+            </div>
+            <div class="bee-shape float-bob-x">
+                <img src="{{ url_for('.static', filename='/img/breadcrumb-shape/bee.png') }}" alt="shape-img">
+            </div>
+            <div class="container">
+                <div class="page-heading">
+                    <h1 class="wow fadeInUp el-messiri-class" data-wow-delay=".3s">كِتَابَةُ الْحُروف</h1>
+                    <ul class="breadcrumb-items wow fadeInUp" data-wow-delay=".5s">
+                        <li class="el-messiri-class">
+                                العَرَبِيَّةُ
+                        </li>
+                    </ul>
+                </div>
+            </div>
+</div>
+<section class="program-section section-padding section-bg-2 fix">
+            <div class="top-shape">
+                <img src="{{ url_for('.static', filename='/img/section-top-shape.png') }}" alt="shape-img">
+            </div>
+            <div class="bottom-shape">
+                <img src="{{ url_for('.static', filename='/img/section-bottom-shape.png') }}" alt="shape-img">
+            </div>
+            <div class="mask-shape float-bob-x">
+                <img src="{{ url_for('.static', filename='/img/program/mask.png') }}" alt="shape-img">
+            </div>
+            <div class="pencil-shape">
+                <img src="{{ url_for('.static', filename='/img/program/pencil.png') }}" alt="shape-img">
+            </div>
+            <div class="mask-shape-2">
+                <img src="{{ url_for('.static', filename='/img/program/mask-2.png') }}" alt="shape-img">
+            </div>
+            <div class="compass-shape">
+                <img src="{{ url_for('.static', filename='/img/program/compass.png') }}" alt="shape-img">
+            </div>
+            <div class="container">
+                <div class="section-title text-center mt-60">
+                    <h2 class="wow fadeInUp el-messiri-class" data-wow-delay=".3s">إِسْتَمِع إِلَى الحَرْف وحَاوِل رَسْمَهُ عَلَى اللَّوْحَةِ السَّوْدَاءِ بِنَفْسِكَ</h2>
+                </div>
+                <div class="text-center">
+                   <span onclick="loadAudio()" class="wow fadeInUp" data-wow-delay=".3s"><i class='fas fa-volume-up'></i></span>
+                    <audio autoplay id="audio">
+                        <source id="audio_source" src="" type="audio/ogg">
+                    </audio>
+                    <p id="writingDigit" style="font-size: 200%; font-weight: bold; display: none;"></p>
+                    <div class="char-text">
+                        <p id="writingDigit_text_eng" style="font-size: 200%; font-weight: bold; display: inline;"></p>
+                        <p id="writingDigit_text_arb" style="font-size: 200%; font-weight: bold; display: inline;"></p>
+                    </div>
+                    <section id="canvas-part">
+                        <canvas id="main-canvas" width="350" height="350"></canvas>
+                        <canvas style="display: none" id="small-main-canvas" width="64" height="64"></canvas>
+                        <canvas style="display: none" id="small-canvas" width="64" height="64"></canvas>
+                        <div id="prediction" class="el-messiri-class" style="line-height: 1.6;"></div>
+                    </section>
+                    <div style="padding-left: 1%;">
+                        <h2 id="label"></h2>
+                    </div>
+                    <div class="btn-char-test">
+                        <button id="erase" class="theme-btn">فَسْخ</button>
+                        <button id="predict" class="theme-btn">نَتِيجَة</button>
+                        <button id="tryAnother" class="theme-btn">حَرْفٌ آخَر </button>
+                        <a href="{{ url_for('play') }}"><button id="back" class="theme-btn">رُجُوع</button></a>
+                    </div>
+                </div>
+            </div>
+</section>
+
+<script src="{{ url_for('.static', filename='/dl/image_class.js') }}"></script>
+<script src="{{ url_for('.static', filename='/dl/predict_character_test.js') }}"></script>
+
+  <script>
+
+    $("#tryAnother").on('click', function () {
+      erase();
+      random_digit();
+    });
+
+    function loadAudio() {
+      document.getElementById('audio').play();
+    }
+
+    function goBack() {
+      location.href = "/character"
+    }
+
+  </script>
+  <script>
+    function myFunction(value) {
+      if(value == 'character') {
+        document.getElementById("myDropdown-character").classList.toggle("show");
+      }
+      else if(value == 'digit') {
+        document.getElementById("myDropdown-digit").classList.toggle("show");
+      }
+    }
+
+    window.onclick = function(event) {
+      if (!event.target.matches('.dropbtn-character')) {
+        var dropdowns = document.getElementsByClassName("dropdown-character");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+      if (!event.target.matches('.dropbtn-digit')) {
+        var dropdowns = document.getElementsByClassName("dropdown-digit");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    }
+    </script>
+{% include '_footer2.html' %}

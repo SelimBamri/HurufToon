@@ -1,0 +1,115 @@
+{% include '_header2.html' %}
+<div class="breadcrumb-wrapper bg-cover" style='background-image: url("{{ url_for('.static', filename='/img/breadcrumb.png') }}");'>
+            <div class="line-shape">
+                <img src="{{ url_for('.static', filename='/img/breadcrumb-shape/line.png') }}" alt="shape-img">
+            </div>
+            <div class="plane-shape float-bob-y">
+                <img src="{{ url_for('.static', filename='/img/breadcrumb-shape/plane.png') }}" alt="shape-img">
+            </div>
+            <div class="doll-shape float-bob-x">
+                <img src="{{ url_for('.static', filename='/img/breadcrumb-shape/doll.png') }}" alt="shape-img">
+            </div>
+            <div class="parasuit-shape float-bob-y">
+                <img src="{{ url_for('.static', filename='/img/breadcrumb-shape/parasuit.png') }}" alt="shape-img">
+            </div>
+            <div class="frame-shape">
+                <img src="{{ url_for('.static', filename='/img/breadcrumb-shape/frame.png') }}" alt="shape-img">
+            </div>
+            <div class="bee-shape float-bob-x">
+                <img src="{{ url_for('.static', filename='/img/breadcrumb-shape/bee.png') }}" alt="shape-img">
+            </div>
+            <div class="container">
+                <div class="page-heading">
+                    <h1 class="wow fadeInUp el-messiri-class" data-wow-delay=".3s">نَتِيجَةُ الْاِختبَار</h1>
+                    <ul class="breadcrumb-items wow fadeInUp" data-wow-delay=".5s">
+                        <li class="el-messiri-class">
+                                نَتِيجَةُ الْاِختبَار
+                        </li>
+                        <li>
+                            <i class="fas fa-chevron-left"></i>
+                        </li>
+                        <li>
+                            <a href="{{ url_for('hello_world') }}" class="el-messiri-class">
+                                الرَّئيسيَّةُ
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+</div>
+<section class="program-section section-padding section-bg-2 fix">
+            <div class="top-shape">
+                <img src="{{ url_for('.static', filename='/img/section-top-shape.png') }}" alt="shape-img">
+            </div>
+            <div class="bottom-shape">
+                <img src="{{ url_for('.static', filename='/img/section-bottom-shape.png') }}" alt="shape-img">
+            </div>
+            <div class="mask-shape float-bob-x">
+                <img src="{{ url_for('.static', filename='/img/program/mask.png') }}" alt="shape-img">
+            </div>
+            <div class="pencil-shape">
+                <img src="{{ url_for('.static', filename='/img/program/pencil.png') }}" alt="shape-img">
+            </div>
+            <div class="mask-shape-2">
+                <img src="{{ url_for('.static', filename='/img/program/mask-2.png') }}" alt="shape-img">
+            </div>
+            <div class="compass-shape">
+                <img src="{{ url_for('.static', filename='/img/program/compass.png') }}" alt="shape-img">
+            </div>
+            <div class="container">
+                <div class="section-title text-center mt-60">
+                    <h2 class="wow fadeInUp el-messiri-class" data-wow-delay=".3s">أَحْسَنْتَ أَيُّهَا <br> البَطَل</h2>
+                </div>
+                <div class="row">
+                    <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".3s">
+                        <div class="program-box-items">
+                            <div class="program-bg {% if x %} bg-2 {% endif %}"  ></div>
+                            <div class="program-content text-center">
+                                <h4>
+                                    <a href="{{ url_for('signup_student') }}" class="el-messiri-class">القِرَاءَة</a>
+                                </h4>
+                                <p class="el-messiri-class">
+                                    قُدْرَتُكَ عَلَى القِرَاءَةِ <br>{% if not x %}رَائِعَة {% else %} قَادِرَةٌ عَلَى التَّحَسُّن {% endif %}
+                                </p>
+                                <a href="{{ url_for('signup_student') }}" class="arrow-icon {% if x %} color-2 {% endif %}">
+                                    {% if not x %}<i class="fa-solid fa-check"></i> {% else %} <i class="fa-solid fa-xmark"></i> {% endif %}
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".3s">
+                        <div class="program-box-items">
+                            <div class="program-bg {% if g %} bg-2 {% endif %}"  ></div>
+                            <div class="program-content text-center">
+                                <h4>
+                                    <a href=# class="el-messiri-class">الكِتَابَة</a>
+                                </h4>
+                                <p class="el-messiri-class">
+                                    قُدْرَتُكَ عَلَى الكِتَابَةِ <br>{% if not g %}رَائِعَة {% else %} قَادِرَةٌ عَلَى التَّحَسُّن {% endif %}
+                                </p>
+                                <a href="{{ url_for('signup_student') }}" class="arrow-icon {% if g %} color-2 {% endif %}">
+                                    {% if not g %}<i class="fa-solid fa-check"></i> {% else %} <i class="fa-solid fa-xmark"></i> {% endif %}
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".3s">
+                        <div class="program-box-items">
+                            <div class="program-bg {% if c %} bg-2 {% endif %}"  ></div>
+                            <div class="program-content text-center">
+                                <h4>
+                                    <a href="{{ url_for('signup_student') }}" class="el-messiri-class">الحِسَاب</a>
+                                </h4>
+                                <p class="el-messiri-class">
+                                    قُدْرَتُكَ عَلَى الحِسَابِ <br>{% if not c %}رَائِعَة {% else %} قَادِرَةٌ عَلَى التَّحَسُّن {% endif %}
+                                </p>
+                                <a href="{{ url_for('signup_student') }}" class="arrow-icon {% if c %} color-2 {% endif %}">
+                                    {% if not c %}<i class="fa-solid fa-check"></i> {% else %} <i class="fa-solid fa-xmark"></i> {% endif %}
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+</section>
+{% include '_footer2.html' %}

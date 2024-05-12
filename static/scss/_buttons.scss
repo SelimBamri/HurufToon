@@ -1,0 +1,139 @@
+//>>>>> Component Button Here <<<<<//
+.theme-btn {
+    display: inline-block;
+    vertical-align: middle;
+    border: none;
+    outline: none !important;
+    background-color: $theme-color;
+    color: $white;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 22px 40px;
+    @include transition;
+    letter-spacing: 0;
+    border-radius: 22px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    line-height: 1;
+    z-index: 9;
+    text-transform: capitalize;
+
+    i {
+        margin-left: 10px;
+    }
+
+    &::before,&::after {
+        position: absolute;
+        top: 50%;
+        content: "";
+        width: 20px;
+        height: 20px;
+        background-color: $header-color;
+        border-radius: 50%;
+        z-index: -1;
+    }
+
+    &::before {
+        left: -20px;
+        transform: translate(-50%, -50%);
+    }
+
+    &::after {
+        right: -20px;
+        transform: translate(50%, -50%);
+    }
+
+    &:hover {
+        color: $white;
+
+        &::before {
+            animation: criss-cross-left 0.8s both;
+            animation-direction: alternate;
+        }
+    
+        &::after {
+            animation: criss-cross-right 0.8s both;
+              animation-direction: alternate;
+        }
+    }
+
+    &.bg-white {
+        background-color: $white;
+        color: $header-color;
+
+        &:hover {
+            color: $white;
+        }
+    }
+
+    &.transparent {
+        background-color: transparent;
+        border: 1px solid $theme-color-2;
+        color: $theme-color-2;
+        padding: 20px 40px;
+
+        &:hover {
+            color: $white;
+        }
+
+        @include breakpoint (max-md){
+            padding: 18px 32px;
+        }
+    
+        @include breakpoint (max-sm){
+            padding: 16px 30px;
+            font-size: 14px;
+        }
+    }
+
+    &.transparent-2 {
+        background-color: transparent;
+        border: 1px solid $theme-color;
+        color: $theme-color;
+        padding: 20px 40px;
+
+        &:hover {
+            color: $white;
+            border: 1px solid transparent;
+        }
+
+        @include breakpoint (max-md){
+            padding: 18px 32px;
+        }
+    
+        @include breakpoint (max-sm){
+            padding: 16px 30px;
+            font-size: 14px;
+        }
+    }
+
+
+    @include breakpoint (max-md){
+        padding: 20px 32px;
+    }
+
+    @include breakpoint (max-sm){
+        padding: 18px 30px;
+        font-size: 14px;
+    }
+}
+
+.theme-btn-2 {
+    font-size: 16px;
+    display: inline-block;
+    font-weight: 600;
+    color: $text-color;
+    text-transform: capitalize;
+
+    i {
+        margin-left: 10px;
+    }
+
+    &:hover {
+        color: $theme-color;
+    }
+}
+
+
+//>>>>> Component Button End <<<<<//

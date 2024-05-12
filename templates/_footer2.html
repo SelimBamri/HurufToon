@@ -1,0 +1,247 @@
+    <footer class="footer-section section-bg">
+      <div class="frame-shape style-2">
+        <img src="{{ url_for('static',filename='img/frame-2.png')}}" alt="shape-img" />
+      </div>
+      <div class="frame-shape-3 float-bob-y">
+        <img src="{{ url_for('static',filename='img/frame-3.png')}}" alt="shape-img" />
+      </div>
+      <div class="footer-widgets-wrapper">
+        <div class="container">
+          <div class="row">
+            <div
+              class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp"
+              data-wow-delay=".3s"
+            >
+              <div class="single-footer-widget">
+                <div class="widget-head">
+                  <a href="application/index.html">
+                    <img src="{{ url_for('static',filename='img/logo/logo.png')}}" style="height: 5rem; width: auto" alt="logo-img" />
+                  </a>
+                </div>
+                <div class="footer-content">
+                  <p class="el-messiri-class">
+                    حروف تون منصة تعليمية لتطوير مهارات الأطفال المصابين بخلل القراءة
+                  </p>
+                  <div class="social-icon d-flex align-items-center">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-xl-2 col-lg-4 col-md-6 ps-lg-5 wow fadeInUp"
+              data-wow-delay=".5s"
+            >
+              <div class="single-footer-widget">
+                <div class="widget-head">
+                  <h3 class="el-messiri-class">خدماتنا</h3>
+                </div>
+                <ul class="list-area">
+                  <li>
+                    <a href="#" class="el-messiri-class">
+                      اختبار المستوى
+                      <i class="fa-solid fa-chevron-left"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="el-messiri-class">
+                      الــديــس بــوت
+                      <i class="fa-solid fa-chevron-left"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="el-messiri-class">
+                        تمارين تفاعلـيـة
+                      <i class="fa-solid fa-chevron-left"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div
+              class="col-xl-3 col-lg-4 col-md-6 ps-lg-5 wow fadeInUp"
+              data-wow-delay=".5s"
+            >
+              <div class="single-footer-widget style-margin">
+                <div class="widget-head">
+                  <h3 class="el-messiri-class">صفحاتنا</h3>
+                </div>
+                <ul class="list-area">
+                  <li>
+                    <a href="{{ url_for('hello_world') }}" class="el-messiri-class">
+                      الصفحة الرئيسية
+                    <i class="fa-solid fa-chevron-left"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="{{ url_for('about') }}" class="el-messiri-class">
+                      تعرف علينا
+                      <i class="fa-solid fa-chevron-left"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="{{ url_for('contact') }}" class="el-messiri-class">
+                      تواصل معنا
+                      <i class="fa-solid fa-chevron-left"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div
+              class="col-xl-4 col-lg-4 col-md-6 wow fadeInUp"
+              data-wow-delay=".7s"
+            >
+              <div class="single-footer-widget style-margin">
+                <div class="widget-head">
+                  <h3 class="el-messiri-class">منصتنا</h3>
+                </div>
+                <div class="footer-gallery">
+                  <div class="gallery-wrap">
+                    <div class="gallery-item">
+                      <div class="thumb">
+                        <a
+                          href="{{ url_for('static',filename='img/footer/gallery-1.jpg')}}"
+                          class="img-popup"
+                        >
+                          <img
+                            src="{{ url_for('static',filename='img/footer/gallery-1.jpg')}}"
+                            alt="gallery-img"
+                          />
+                          <div class="icon">
+                            <i class="far fa-plus"></i>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="thumb">
+                        <a
+                          href="{{ url_for('static',filename='img/footer/gallery-2.jpg')}}"
+                          class="img-popup"
+                        >
+                          <img
+                            src="{{ url_for('static',filename='img/footer/gallery-2.jpg')}}"
+                            alt="gallery-img"
+                          />
+                          <div class="icon">
+                            <i class="far fa-plus"></i>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="thumb">
+                        <a
+                          href="{{ url_for('static',filename='img/footer/gallery-3.jpg')}}"
+                          class="img-popup"
+                        >
+                          <img
+                            src="{{ url_for('static',filename='img/footer/gallery-3.jpg')}}"
+                            alt="gallery-img"
+                          />
+                          <div class="icon">
+                            <i class="far fa-plus"></i>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="gallery-item">
+                      <div class="thumb">
+                        <a
+                          href="{{ url_for('static',filename='img/footer/gallery-4.jpg')}}"
+                          class="img-popup"
+                        >
+                          <img
+                            src="{{ url_for('static',filename='img/footer/gallery-4.jpg')}}"
+                            alt="gallery-img"
+                          />
+                          <div class="icon">
+                            <i class="far fa-plus"></i>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="thumb">
+                        <a
+                          href="{{ url_for('static',filename='img/footer/gallery-5.jpg')}}"
+                          class="img-popup"
+                        >
+                          <img
+                            src="{{ url_for('static',filename='img/footer/gallery-5.jpg')}}"
+                            alt="gallery-img"
+                          />
+                          <div class="icon">
+                            <i class="far fa-plus"></i>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="thumb">
+                        <a
+                          href="{{ url_for('static',filename='img/footer/gallery-6.jpg')}}"
+                          class="img-popup"
+                        >
+                          <img
+                            src="{{ url_for('static',filename='img/footer/gallery-6.jpg')}}"
+                            alt="gallery-img"
+                          />
+                          <div class="icon">
+                            <i class="far fa-plus"></i>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="f-bottom-shape"></div>
+        <div class="container">
+          <div
+            class="footer-wrapper d-flex align-items-center justify-content-between"
+          >
+            <p class="wow fadeInLeft color-2" data-wow-delay=".3s">
+              © All Copyright 2024 by <a href="{{ url_for('hello_world')}}">Huruf Toon</a>
+            </p>
+            <ul class="footer-menu wow fadeInRight" data-wow-delay=".5s">
+              <li>
+                <a href="application/contact.html"> Terms & Condition </a>
+              </li>
+              <li>
+                <a href="application/contact.html"> Privacy Policy </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <a href="#" id="scrollUp" class="scroll-icon">
+          <i class="far fa-arrow-up"></i>
+        </a>
+      </div>
+    </footer>
+
+    <!--<< All JS Plugins >>-->
+    <script src="{{ url_for('.static',filename='js/jquery-3.7.1.min.js')}}"></script>
+    <!--<< Viewport Js >>-->
+    <script src="{{ url_for('.static',filename='js/viewport.jquery.js')}}"></script>
+    <!--<< Bootstrap Js >>-->
+    <script src="{{ url_for('.static',filename='js/bootstrap.bundle.min.js')}}"></script>
+    <!--<< Nice Select Js >>-->
+    <script src="{{ url_for('.static',filename='js/jquery.nice-select.min.js')}}"></script>
+    <!--<< Waypoints Js >>-->
+    <script src="{{ url_for('.static',filename='js/jquery.waypoints.js')}}"></script>
+    <!--<< Counterup Js >>-->
+    <script src="{{ url_for('.static',filename='js/jquery.counterup.min.js')}}"></script>
+    <!--<< Swiper Slider Js >>-->
+    <script src="{{ url_for('.static',filename='js/swiper-bundle.min.js')}}"></script>
+    <!--<< MeanMenu Js >>-->
+    <script src="{{ url_for('.static',filename='js/jquery.meanmenu.min.js')}}"></script>
+    <!--<< Magnific Popup Js >>-->
+    <script src="{{ url_for('.static',filename='js/jquery.magnific-popup.min.js')}}"></script>
+    <!--<< Wow Animation Js >>-->
+    <script src="{{ url_for('.static',filename='js/wow.min.js')}}"></script>
+    <!--<< Main.js >>-->
+    <script src="{{ url_for('.static',filename='js/main.js')}}"></script>
+  </body>
+</html>

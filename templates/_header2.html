@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!--<< Header Area >>-->
+    <head>
+        <!-- ========== Meta Tags ========== -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="gramentheme">
+        <meta name="description" content="Kidsa - Kindergarten School HTML Template">
+        <!-- ======== Page title ============ -->
+        <title>Huruf toon</title>
+        <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@0.13.5"> </script>
+        <link rel="shortcut icon" href="{{ url_for('.static', filename='img/favicon.svg') }}" />
+        <link rel="stylesheet" href="{{ url_for('.static', filename='css/bootstrap.min.css') }}" />
+        <link rel="stylesheet" href="{{ url_for('.static', filename='css/all.min.css') }}" />
+        <link rel="stylesheet" href="{{ url_for('.static', filename='css/animate.css') }}" />
+        <link rel="stylesheet" href="{{ url_for('.static', filename='css/magnific-popup.css') }}" />
+        <link rel="stylesheet" href="{{ url_for('.static', filename='css/meanmenu.css') }}" />
+        <link rel="stylesheet" href="{{ url_for('.static', filename='css/swiper-bundle.min.css') }}" />
+        <link rel="stylesheet" href="{{ url_for('.static', filename='css/nice-select.css') }}" />
+        <link rel="stylesheet" href="{{ url_for('.static', filename='css/main.css') }}" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+          <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400..700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <!-- Header Top Section Start -->
+        <div class="header-top-section">
+            <div class="header-top-shape">
+                <img src="{{ url_for('.static', filename='img/header-top-shape.png') }}" alt="shape-img">
+            </div>
+            <div class="container-fluid">
+                <div class="header-top-wrapper">
+                    <ul class="contact-list">
+                        <li class="el-messiri-class">
+                            <i class="fal fa-map-marker-alt"></i>
+                            أريانة 2080
+                        </li>
+                        <li>
+                            <i class="far fa-envelope"></i>
+                            <a href="mailto:info@example.com" class="link">huruf.toon@contact.com</a>
+                        </li>
+                    </ul>
+                    <div class="social-icon d-flex align-items-center">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                        <span class="el-messiri-class">تابعونا</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Header Section Start -->
+        <header id="header-sticky" class="header-1">
+            <div class="container-fluid">
+                <div class="mega-menu-wrapper">
+                    <div class="header-main style-2">
+                        <div class="header-left">
+                            <div class="logo">
+                                <a href="{{ url_for('hello_world')}}" class="header-logo">
+                                    <img src="{{ url_for('static',filename='img/logo/logo.png')}}" style="height: 5rem; width: auto;" alt="logo-img">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="header-right d-flex justify-content-end align-items-center">
+                            <div class="mean__menu-wrapper">
+                                <div class="main-menu">
+                                    <nav id="mobile-menu">
+                                        <ul>
+                                            {% if user %}
+                                              {% if user.role == "PARENT" %}
+                                                 <li>
+                                                  <a class="el-messiri-class" href="{{ url_for("get_therapists") }}">تَواصُلٌ مَعَ مُخْتَصِّ عِلاج</a>
+                                                </li>
+                                                <li>
+                                                  <a class="el-messiri-class" href="{{ url_for("hello_world") }}">دِيس بُوَت</a>
+                                                </li>
+                                              {% elif user.role == "STUDENT" %}
+                                                  <li>
+                                                  <a class="el-messiri-class" href="{{ url_for("play") }}">تَعَلَّمْ</a>
+                                                </li>
+                                              {% endif %}
+                                            {% endif %}
+                                          <li>
+                                              <a class="el-messiri-class" href="{{ url_for('contact') }}">تَواصَل مَعَنَا</a>
+                                          </li>
+                                          <li>
+                                              <a class="el-messiri-class" aria-current="page" href="{{ url_for('about') }}">التَّعْريفُ</a>
+                                          </li>
+                                          <li>
+                                              <a class="el-messiri-class" aria-current="page" href="{{ url_for('hello_world') }}">الرَّئيسيَّةُ</a>
+                                          </li>
+                                        {% if user %}
+                                              <li>
+                                                  <a class="el-messiri-class">
+                                                    {{ user.username  }}
+                                                      <i class="fas fa-user"></i>
+                                                  </a>
+                                              <ul class="submenu">
+                                                <li><a href="{{ url_for('edit_account') }}">تحديث الحساب</a></li>
+                                                <li><a href="{{ url_for('logout') }}">غلق الموقع</a></li>
+                                              </ul>
+                                              </li>
+                                              {% else %}
+                                              <li>
+                                                <a class="el-messiri-class" href="{{ url_for('login') }}">تَسْجيلُ الدُّخول</a>
+                                              </li>
+                                              <li class="nav-item px-3 py-2 py-lg-0">
+                                                <a class="el-messiri-class" href="{{ url_for('signup') }}">الِاشْتِراك</a>
+                                              </li>
+                                        {% endif %}
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
