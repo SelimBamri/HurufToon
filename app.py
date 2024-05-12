@@ -1549,5 +1549,15 @@ def digits():
     return render_template('application/digits_exercise.html', user=user)
 
 
+@app.route('/parent/dashboard', methods=['GET', 'POST'])
+def dashboard():
+    if not session:
+        return redirect(url_for('hello_world'))
+    user = User.query.filter_by(id=session['user']).first()
+    if user.role != "PARENT":
+        return redirect(url_for('hello_world'))
+    child = User.query.filter_by(id=user.child).first()
+    return render_template('application/dashboard.html', user=user, child=child)
+
 if __name__ == '__main__':
     app.run(debug=True)
